@@ -1,0 +1,14 @@
+.venv
+**/__pycache__
+**/*.pyc
+**/node_modules
+frontend/dist
+backend/*.db
+backend/.pytest_cache
+.env
+.git
+.claude
+.vscode
+training
+docs
+*.log

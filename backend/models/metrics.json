@@ -1,0 +1,1052 @@
+{
+  "generated_at": "2026-10-12T16:14:22+00:00",
+  "labels": [
+    "limitation_of_liability",
+    "unilateral_termination",
+    "unilateral_change",
+    "content_removal",
+    "contract_by_using",
+    "choice_of_law",
+    "jurisdiction",
+    "arbitration",
+    "service_bond_lock_in",
+    "deposit_forfeiture",
+    "one_sided_notice",
+    "rent_escalation",
+    "non_compete",
+    "broad_data_sharing"
+  ],
+  "models": {
+    "baseline-lr": {
+      "display_name": "TF-IDF + Logistic Regression",
+      "available": true,
+      "results": {
+        "unfair_tos_test": {
+          "micro_precision": 0.7198,
+          "micro_recall": 0.7043,
+          "micro_f1": 0.712,
+          "macro_precision": 0.7134,
+          "macro_recall": 0.755,
+          "macro_f1": 0.7182,
+          "per_label": {
+            "limitation_of_liability": {
+              "precision": 0.7714,
+              "recall": 0.7105,
+              "f1": 0.7397,
+              "support": 38,
+              "tp": 27,
+              "fp": 8,
+              "fn": 11,
+              "tn": 1561
+            },
+            "unilateral_termination": {
+              "precision": 0.6857,
+              "recall": 0.6316,
+              "f1": 0.6575,
+              "support": 38,
+              "tp": 24,
+              "fp": 11,
+              "fn": 14,
+              "tn": 1558
+            },
+            "unilateral_change": {
+              "precision": 0.8,
+              "recall": 0.6316,
+              "f1": 0.7059,
+              "support": 38,
+              "tp": 24,
+              "fp": 6,
+              "fn": 14,
+              "tn": 1563
+            },
+            "content_removal": {
+              "precision": 0.5,
+              "recall": 0.8462,
+              "f1": 0.6286,
+              "support": 13,
+              "tp": 11,
+              "fp": 11,
+              "fn": 2,
+              "tn": 1583
+            },
+            "contract_by_using": {
+              "precision": 0.8667,
+              "recall": 0.5652,
+              "f1": 0.6842,
+              "support": 23,
+              "tp": 13,
+              "fp": 2,
+              "fn": 10,
+              "tn": 1582
+            },
+            "choice_of_law": {
+              "precision": 0.7059,
+              "recall": 0.9231,
+              "f1": 0.8,
+              "support": 13,
+              "tp": 12,
+              "fp": 5,
+              "fn": 1,
+              "tn": 1589
+            },
+            "jurisdiction": {
+              "precision": 0.7778,
+              "recall": 0.875,
+              "f1": 0.8235,
+              "support": 16,
+              "tp": 14,
+              "fp": 4,
+              "fn": 2,
+              "tn": 1587
+            },
+            "arbitration": {
+              "precision": 0.6,
+              "recall": 0.8571,
+              "f1": 0.7059,
+              "support": 7,
+              "tp": 6,
+              "fp": 4,
+              "fn": 1,
+              "tn": 1596
+            }
+          }
+        },
+        "clauseguard_in_test": {
+          "micro_precision": 0.8333,
+          "micro_recall": 0.5263,
+          "micro_f1": 0.6452,
+          "macro_precision": 0.3778,
+          "macro_recall": 0.3704,
+          "macro_f1": 0.3413,
+          "per_label": {
+            "limitation_of_liability": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "tn": 52
+            },
+            "unilateral_termination": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2,
+              "tn": 50
+            },
+            "unilateral_change": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "tn": 50
+            },
+            "content_removal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "contract_by_using": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "choice_of_law": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "jurisdiction": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "arbitration": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "service_bond_lock_in": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 11,
+              "tp": 11,
+              "fp": 0,
+              "fn": 0,
+              "tn": 42
+            },
+            "deposit_forfeiture": {
+              "precision": 0.4,
+              "recall": 1.0,
+              "f1": 0.5714,
+              "support": 2,
+              "tp": 2,
+              "fp": 3,
+              "fn": 0,
+              "tn": 48
+            },
+            "one_sided_notice": {
+              "precision": 1.0,
+              "recall": 0.3333,
+              "f1": 0.5,
+              "support": 12,
+              "tp": 4,
+              "fp": 0,
+              "fn": 8,
+              "tn": 41
+            },
+            "rent_escalation": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "tn": 51
+            },
+            "non_compete": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "tn": 50
+            },
+            "broad_data_sharing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "tn": 51
+            }
+          }
+        }
+      }
+    },
+    "baseline-nb": {
+      "display_name": "TF-IDF + Naive Bayes",
+      "available": true,
+      "results": {
+        "unfair_tos_test": {
+          "micro_precision": 0.7581,
+          "micro_recall": 0.5054,
+          "micro_f1": 0.6065,
+          "macro_precision": 0.7896,
+          "macro_recall": 0.5146,
+          "macro_f1": 0.6038,
+          "per_label": {
+            "limitation_of_liability": {
+              "precision": 0.7143,
+              "recall": 0.6579,
+              "f1": 0.6849,
+              "support": 38,
+              "tp": 25,
+              "fp": 10,
+              "fn": 13,
+              "tn": 1559
+            },
+            "unilateral_termination": {
+              "precision": 0.7097,
+              "recall": 0.5789,
+              "f1": 0.6377,
+              "support": 38,
+              "tp": 22,
+              "fp": 9,
+              "fn": 16,
+              "tn": 1560
+            },
+            "unilateral_change": {
+              "precision": 0.6429,
+              "recall": 0.2368,
+              "f1": 0.3462,
+              "support": 38,
+              "tp": 9,
+              "fp": 5,
+              "fn": 29,
+              "tn": 1564
+            },
+            "content_removal": {
+              "precision": 0.5833,
+              "recall": 0.5385,
+              "f1": 0.56,
+              "support": 13,
+              "tp": 7,
+              "fp": 5,
+              "fn": 6,
+              "tn": 1589
+            },
+            "contract_by_using": {
+              "precision": 1.0,
+              "recall": 0.3478,
+              "f1": 0.5161,
+              "support": 23,
+              "tp": 8,
+              "fp": 0,
+              "fn": 15,
+              "tn": 1584
+            },
+            "choice_of_law": {
+              "precision": 1.0,
+              "recall": 0.8462,
+              "f1": 0.9167,
+              "support": 13,
+              "tp": 11,
+              "fp": 0,
+              "fn": 2,
+              "tn": 1594
+            },
+            "jurisdiction": {
+              "precision": 1.0,
+              "recall": 0.625,
+              "f1": 0.7692,
+              "support": 16,
+              "tp": 10,
+              "fp": 0,
+              "fn": 6,
+              "tn": 1591
+            },
+            "arbitration": {
+              "precision": 0.6667,
+              "recall": 0.2857,
+              "f1": 0.4,
+              "support": 7,
+              "tp": 2,
+              "fp": 1,
+              "fn": 5,
+              "tn": 1599
+            }
+          }
+        },
+        "clauseguard_in_test": {
+          "micro_precision": 0.9,
+          "micro_recall": 0.4737,
+          "micro_f1": 0.6207,
+          "macro_precision": 0.3333,
+          "macro_recall": 0.2593,
+          "macro_f1": 0.2778,
+          "per_label": {
+            "limitation_of_liability": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "tn": 52
+            },
+            "unilateral_termination": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 2,
+              "fn": 2,
+              "tn": 49
+            },
+            "unilateral_change": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "tn": 50
+            },
+            "content_removal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "contract_by_using": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "choice_of_law": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "jurisdiction": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "arbitration": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "service_bond_lock_in": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 11,
+              "tp": 11,
+              "fp": 0,
+              "fn": 0,
+              "tn": 42
+            },
+            "deposit_forfeiture": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "tn": 51
+            },
+            "one_sided_notice": {
+              "precision": 1.0,
+              "recall": 0.3333,
+              "f1": 0.5,
+              "support": 12,
+              "tp": 4,
+              "fp": 0,
+              "fn": 8,
+              "tn": 41
+            },
+            "rent_escalation": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "tn": 51
+            },
+            "non_compete": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "tn": 50
+            },
+            "broad_data_sharing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "tn": 51
+            }
+          }
+        }
+      }
+    },
+    "legal-bert": {
+      "display_name": "Legal-BERT (fine-tuned)",
+      "available": true,
+      "results": {
+        "unfair_tos_test": {
+          "micro_precision": 0.7747,
+          "micro_recall": 0.7581,
+          "micro_f1": 0.7663,
+          "macro_precision": 0.8154,
+          "macro_recall": 0.7967,
+          "macro_f1": 0.8023,
+          "per_label": {
+            "limitation_of_liability": {
+              "precision": 0.6585,
+              "recall": 0.7105,
+              "f1": 0.6835,
+              "support": 38,
+              "tp": 27,
+              "fp": 14,
+              "fn": 11,
+              "tn": 1555
+            },
+            "unilateral_termination": {
+              "precision": 0.7179,
+              "recall": 0.7368,
+              "f1": 0.7273,
+              "support": 38,
+              "tp": 28,
+              "fp": 11,
+              "fn": 10,
+              "tn": 1558
+            },
+            "unilateral_change": {
+              "precision": 0.7714,
+              "recall": 0.7105,
+              "f1": 0.7397,
+              "support": 38,
+              "tp": 27,
+              "fp": 8,
+              "fn": 11,
+              "tn": 1561
+            },
+            "content_removal": {
+              "precision": 0.7143,
+              "recall": 0.7692,
+              "f1": 0.7407,
+              "support": 13,
+              "tp": 10,
+              "fp": 4,
+              "fn": 3,
+              "tn": 1590
+            },
+            "contract_by_using": {
+              "precision": 0.9375,
+              "recall": 0.6522,
+              "f1": 0.7692,
+              "support": 23,
+              "tp": 15,
+              "fp": 1,
+              "fn": 8,
+              "tn": 1583
+            },
+            "choice_of_law": {
+              "precision": 0.9286,
+              "recall": 1.0,
+              "f1": 0.963,
+              "support": 13,
+              "tp": 13,
+              "fp": 1,
+              "fn": 0,
+              "tn": 1593
+            },
+            "jurisdiction": {
+              "precision": 0.9375,
+              "recall": 0.9375,
+              "f1": 0.9375,
+              "support": 16,
+              "tp": 15,
+              "fp": 1,
+              "fn": 1,
+              "tn": 1590
+            },
+            "arbitration": {
+              "precision": 0.8571,
+              "recall": 0.8571,
+              "f1": 0.8571,
+              "support": 7,
+              "tp": 6,
+              "fp": 1,
+              "fn": 1,
+              "tn": 1599
+            }
+          }
+        },
+        "clauseguard_in_test": {
+          "micro_precision": 0.6667,
+          "micro_recall": 0.3158,
+          "micro_f1": 0.4286,
+          "macro_precision": 0.137,
+          "macro_recall": 0.2121,
+          "macro_f1": 0.1601,
+          "per_label": {
+            "limitation_of_liability": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "tn": 52
+            },
+            "unilateral_termination": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2,
+              "tn": 50
+            },
+            "unilateral_change": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "tn": 50
+            },
+            "content_removal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "contract_by_using": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "choice_of_law": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "jurisdiction": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "arbitration": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "service_bond_lock_in": {
+              "precision": 0.8333,
+              "recall": 0.9091,
+              "f1": 0.8696,
+              "support": 11,
+              "tp": 10,
+              "fp": 2,
+              "fn": 1,
+              "tn": 40
+            },
+            "deposit_forfeiture": {
+              "precision": 0.4,
+              "recall": 1.0,
+              "f1": 0.5714,
+              "support": 2,
+              "tp": 2,
+              "fp": 3,
+              "fn": 0,
+              "tn": 48
+            },
+            "one_sided_notice": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 12,
+              "tp": 0,
+              "fp": 0,
+              "fn": 12,
+              "tn": 41
+            },
+            "rent_escalation": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "tn": 51
+            },
+            "non_compete": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "tn": 50
+            },
+            "broad_data_sharing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "tn": 51
+            }
+          }
+        }
+      }
+    },
+    "hybrid": {
+      "display_name": "Hybrid (Legal-BERT + LR)",
+      "available": true,
+      "results": {
+        "unfair_tos_test": {
+          "micro_precision": 0.7747,
+          "micro_recall": 0.7581,
+          "micro_f1": 0.7663,
+          "macro_precision": 0.8154,
+          "macro_recall": 0.7967,
+          "macro_f1": 0.8023,
+          "per_label": {
+            "limitation_of_liability": {
+              "precision": 0.6585,
+              "recall": 0.7105,
+              "f1": 0.6835,
+              "support": 38,
+              "tp": 27,
+              "fp": 14,
+              "fn": 11,
+              "tn": 1555
+            },
+            "unilateral_termination": {
+              "precision": 0.7179,
+              "recall": 0.7368,
+              "f1": 0.7273,
+              "support": 38,
+              "tp": 28,
+              "fp": 11,
+              "fn": 10,
+              "tn": 1558
+            },
+            "unilateral_change": {
+              "precision": 0.7714,
+              "recall": 0.7105,
+              "f1": 0.7397,
+              "support": 38,
+              "tp": 27,
+              "fp": 8,
+              "fn": 11,
+              "tn": 1561
+            },
+            "content_removal": {
+              "precision": 0.7143,
+              "recall": 0.7692,
+              "f1": 0.7407,
+              "support": 13,
+              "tp": 10,
+              "fp": 4,
+              "fn": 3,
+              "tn": 1590
+            },
+            "contract_by_using": {
+              "precision": 0.9375,
+              "recall": 0.6522,
+              "f1": 0.7692,
+              "support": 23,
+              "tp": 15,
+              "fp": 1,
+              "fn": 8,
+              "tn": 1583
+            },
+            "choice_of_law": {
+              "precision": 0.9286,
+              "recall": 1.0,
+              "f1": 0.963,
+              "support": 13,
+              "tp": 13,
+              "fp": 1,
+              "fn": 0,
+              "tn": 1593
+            },
+            "jurisdiction": {
+              "precision": 0.9375,
+              "recall": 0.9375,
+              "f1": 0.9375,
+              "support": 16,
+              "tp": 15,
+              "fp": 1,
+              "fn": 1,
+              "tn": 1590
+            },
+            "arbitration": {
+              "precision": 0.8571,
+              "recall": 0.8571,
+              "f1": 0.8571,
+              "support": 7,
+              "tp": 6,
+              "fp": 1,
+              "fn": 1,
+              "tn": 1599
+            }
+          }
+        },
+        "clauseguard_in_test": {
+          "micro_precision": 0.8333,
+          "micro_recall": 0.5263,
+          "micro_f1": 0.6452,
+          "macro_precision": 0.3778,
+          "macro_recall": 0.3704,
+          "macro_f1": 0.3413,
+          "per_label": {
+            "limitation_of_liability": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 1,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "tn": 52
+            },
+            "unilateral_termination": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2,
+              "tn": 50
+            },
+            "unilateral_change": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "tn": 50
+            },
+            "content_removal": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "contract_by_using": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "choice_of_law": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "jurisdiction": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "arbitration": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 53
+            },
+            "service_bond_lock_in": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 11,
+              "tp": 11,
+              "fp": 0,
+              "fn": 0,
+              "tn": 42
+            },
+            "deposit_forfeiture": {
+              "precision": 0.4,
+              "recall": 1.0,
+              "f1": 0.5714,
+              "support": 2,
+              "tp": 2,
+              "fp": 3,
+              "fn": 0,
+              "tn": 48
+            },
+            "one_sided_notice": {
+              "precision": 1.0,
+              "recall": 0.3333,
+              "f1": 0.5,
+              "support": 12,
+              "tp": 4,
+              "fp": 0,
+              "fn": 8,
+              "tn": 41
+            },
+            "rent_escalation": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "tn": 51
+            },
+            "non_compete": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 3,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "tn": 50
+            },
+            "broad_data_sharing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 2,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "tn": 51
+            }
+          }
+        }
+      }
+    }
+  },
+  "datasets": {
+    "unfair_tos": {
+      "name": "UNFAIR-ToS (LexGLUE)",
+      "description": "Sentences from 50 online Terms of Service, labelled with 8 unfair clause types.",
+      "split_sizes": {
+        "train": 5532,
+        "validation": 2275,
+        "test": 1607
+      },
+      "label_counts": {
+        "limitation_of_liability": 191,
+        "unilateral_termination": 139,
+        "unilateral_change": 122,
+        "content_removal": 73,
+        "contract_by_using": 76,
+        "choice_of_law": 39,
+        "jurisdiction": 34,
+        "arbitration": 28
+      }
+    },
+    "clauseguard_in": {
+      "name": "ClauseGuard-IN (Indian agreements)",
+      "description": "Clauses from Indian rental agreements, offer letters and app policies; 14 labels.",
+      "split_sizes": {
+        "total": 300,
+        "train": 247,
+        "test": 53,
+        "fair/neutral": 107
+      },
+      "label_counts": {
+        "limitation_of_liability": 14,
+        "unilateral_termination": 19,
+        "unilateral_change": 19,
+        "content_removal": 6,
+        "contract_by_using": 6,
+        "choice_of_law": 10,
+        "jurisdiction": 24,
+        "arbitration": 11,
+        "service_bond_lock_in": 42,
+        "deposit_forfeiture": 21,
+        "one_sided_notice": 27,
+        "rent_escalation": 13,
+        "non_compete": 12,
+        "broad_data_sharing": 7
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "limitation_of_liability": 0.65,
+  "unilateral_termination": 0.7,
+  "unilateral_change": 0.7,
+  "content_removal": 0.65,
+  "contract_by_using": 0.85,
+  "choice_of_law": 0.35,
+  "jurisdiction": 0.75,
+  "arbitration": 0.9,
+  "service_bond_lock_in": 0.3,
+  "deposit_forfeiture": 0.3,
+  "one_sided_notice": 0.5,
+  "rent_escalation": 0.3,
+  "non_compete": 0.5,
+  "broad_data_sharing": 0.3
+}

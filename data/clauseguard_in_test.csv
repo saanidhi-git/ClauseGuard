@@ -1,0 +1,54 @@
+text,labels,doc_type,source,group
+A deduction of one month's rent shall be made from the deposit towards painting and cleaning charges irrespective of the condition of the premises at the time of vacating.,deposit_forfeiture,rental,team-authored,4
+"Maintenance charges, society charges and any increase in property tax shall be borne by the Licensee in addition to the rent, as revised by the Licensor from time to time.",rent_escalation|unilateral_change,rental,team-authored,10
+The Tenant agrees that the first 6 months of this agreement are a lock-in period and shall pay the full rent for those months even if the premises are vacated earlier.,service_bond_lock_in,rental,team-authored,15
+Non-payment of rent for even one month shall entitle the Licensor to terminate this agreement and remove the belongings of the Licensee from the premises.,unilateral_termination,rental,team-authored,19
+The premises shall be used only for residential purposes by the Licensee and the members of the Licensee's family.,,rental,team-authored,33
+The Licensee shall keep the premises clean and in good condition and shall not make any structural alterations without the prior written consent of the Licensor.,,rental,team-authored,35
+Either party may terminate this agreement by giving one month's written notice to the other party.,,rental,team-authored,36
+"The Licensee shall hand over the premises in the same condition as received, subject to normal wear and tear.",,rental,team-authored,46
+"Nothing in this agreement shall be construed as creating a tenancy in favour of the Licensee, and the Licensee shall have no right, title or interest in the premises.",,rental,team-authored,47
+A deduction of one month's rent shall be made from the deposit towards painting and cleaning charges regardless of the condition of the premises at the time of vacating.,deposit_forfeiture,rental,team-authored,4
+The Licensee agrees that the first 8 months of this agreement are a lock-in period and shall pay the full rent for those months even if the premises are vacated earlier.,service_bond_lock_in,rental,team-authored,15
+"Maintenance charges, society charges and any increase in property tax shall be borne by the Licensee in addition to the rent, as revised by the Owner from time to time.",rent_escalation|unilateral_change,rental,team-authored,10
+The Licensee agrees that the first 6 months of this agreement are a lock-in period and shall pay the full rent for those months even if the premises are vacated earlier.,service_bond_lock_in,rental,team-authored,15
+Non-payment of rent for even one month shall entitle the Owner to terminate this agreement and remove the belongings of the Licensee from the premises.,unilateral_termination,rental,team-authored,19
+"If you resign within 24 months of joining, you shall pay Rs. 2,50,000 to the Company and also serve a notice period of 90 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"You shall not solicit or work for any customer of the Company for three years after you leave, irrespective of the reason for separation.",non_compete,offer_letter,team-authored,63
+"You are required to serve a notice period of 90 days upon resignation, whereas the Company may terminate your employment by giving 15 days' notice or salary in lieu thereof.",one_sided_notice,offer_letter,team-authored,64
+Variable pay and bonus are payable at the sole discretion of the management and may be withdrawn at any time without assigning reasons.,unilateral_change,offer_letter,team-authored,70
+"The Company may monitor your personal devices, e-mail and social media accounts and share such information with third parties as it considers necessary.",broad_data_sharing,offer_letter,team-authored,74
+"Please report to the HR department at Nimbus Infosoft Pvt. Ltd., Nashik on 1 September 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+The Company will reimburse reasonable travel and accommodation expenses incurred for official work as per the travel policy.,,offer_letter,team-authored,91
+The Company follows a policy of equal opportunity and does not tolerate harassment of any kind at the workplace.,,offer_letter,team-authored,95
+"This letter, together with its annexures, constitutes the entire terms of your employment with the Company.",,offer_letter,team-authored,99
+"If you resign within 18 months of joining, you shall pay Rs. 1,00,000 to the Company and also serve a notice period of 120 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"You are required to serve a notice period of 60 days upon resignation, whereas the Company may terminate your employment by giving 7 days' notice or salary in lieu thereof.",one_sided_notice,offer_letter,team-authored,64
+"Please report to the HR department at Nimbus Infosoft Pvt. Ltd., Nashik on 1 July 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"If you resign within 12 months of joining, you shall pay Rs. 1,50,000 to the Company and also serve a notice period of 120 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"You shall not solicit or work for any customer of the Company for two years after you leave, irrespective of the reason for separation.",non_compete,offer_letter,team-authored,63
+"You are required to serve a notice period of 120 days upon resignation, whereas the Company may terminate your employment by giving 15 days' notice or salary in lieu thereof.",one_sided_notice,offer_letter,team-authored,64
+"Please report to the HR department at Nimbus Infosoft Pvt. Ltd., Pune on 1 July 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"If you resign within 12 months of joining, you shall pay Rs. 3,00,000 to the Company and also serve a notice period of 90 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"Please report to the HR department at Orbit Softworks Pvt. Ltd., Hyderabad on 1 September 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"If you resign within 12 months of joining, you shall pay Rs. 1,50,000 to the Company and also serve a notice period of 60 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"You are required to serve a notice period of 120 days upon resignation, whereas the Company may terminate your employment by giving 7 days' notice or salary in lieu thereof.",one_sided_notice,offer_letter,team-authored,64
+"Please report to the HR department at Kalpa Systems Pvt. Ltd., Nashik on 15 August 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"If you resign within 30 months of joining, you shall pay Rs. 2,50,000 to the Company and also serve a notice period of 90 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"Please report to the HR department at Kalpa Systems Pvt. Ltd., Nashik on 1 September 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"If you resign within 24 months of joining, you shall pay Rs. 1,00,000 to the Company and also serve a notice period of 120 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"You shall not solicit or work for any customer of the Company for one years after you leave, irrespective of the reason for separation.",non_compete,offer_letter,team-authored,63
+"Please report to the HR department at Vertex Digital Services LLP, Nagpur on 1 July 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"If you resign within 30 months of joining, you shall pay Rs. 2,00,000 to the Company and also serve a notice period of 90 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"The service is provided on an 'as is' and 'as available' basis without warranties of any kind, and you use it at your own risk.",limitation_of_liability,tos,team-authored,111
+"By using the app you allow us to access your contacts, photos, microphone and location, and to share this data with third-party service providers.",broad_data_sharing,tos,team-authored,118
+These Terms of Service explain the rules for using the Chatterly mobile application and website operated by Zentrix Technologies Pvt. Ltd..,,tos,team-authored,121
+"We will notify you by e-mail at least 30 days before any material change to these Terms takes effect, and you may close your account if you do not agree.",,tos,team-authored,125
+We use industry-standard encryption to protect your data in transit and at rest.,,tos,team-authored,136
+These Terms of Service explain the rules for using the StudyNest mobile application and website operated by Kalpa Systems Pvt. Ltd..,,tos,team-authored,121
+These Terms of Service explain the rules for using the the App mobile application and website operated by Nimbus Infosoft Pvt. Ltd..,,tos,team-authored,121
+These Terms of Service explain the rules for using the StudyNest mobile application and website operated by Vertex Digital Services LLP.,,tos,team-authored,121
+These Terms of Service explain the rules for using the QuickLoanz mobile application and website operated by Orbit Softworks Pvt. Ltd..,,tos,team-authored,121
+These Terms of Service explain the rules for using the StudyNest mobile application and website operated by Orbit Softworks Pvt. Ltd..,,tos,team-authored,121
+These Terms of Service explain the rules for using the the App mobile application and website operated by Orbit Softworks Pvt. Ltd..,,tos,team-authored,121
+These Terms of Service explain the rules for using the SnapKart mobile application and website operated by Orbit Softworks Pvt. Ltd..,,tos,team-authored,121

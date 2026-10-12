@@ -1,0 +1,301 @@
+text,labels,doc_type,source,group
+"If the Licensee vacates the premises before the expiry of the lock-in period of 8 months, the entire security deposit of Rs. 75,000 shall stand forfeited.",deposit_forfeiture|service_bond_lock_in,rental,team-authored,0
+"The Licensor shall be entitled to deduct any amount from the security deposit as the Licensor deems fit, and such decision shall be final and binding on the Licensee.",deposit_forfeiture,rental,team-authored,1
+"The security deposit shall be refunded only after the Licensor finds a new licensee for the premises, and no interest shall be payable on it.",deposit_forfeiture,rental,team-authored,2
+"In case of any delay in payment of rent beyond 15 days, the Licensor may forfeit the security deposit in full without further notice.",deposit_forfeiture,rental,team-authored,3
+A deduction of one month's rent shall be made from the deposit towards painting and cleaning charges irrespective of the condition of the premises at the time of vacating.,deposit_forfeiture,rental,team-authored,4
+"No part of the deposit shall be returned if the Licensee fails to give 3 months' notice before vacating, while the Licensor may end the licence at any time.",deposit_forfeiture|one_sided_notice,rental,team-authored,5
+"If any damage is found at the time of vacating, the Licensor may adjust the cost of repairs from the deposit at rates fixed solely by the Licensor.",deposit_forfeiture,rental,team-authored,6
+The monthly rent shall be increased by 8% every 12 months during the term of this agreement.,rent_escalation,rental,team-authored,7
+The Owner reserves the right to revise the rent at any time during the licence period depending on market conditions.,rent_escalation|unilateral_change,rental,team-authored,8
+"On renewal, the rent shall be enhanced by such percentage as the Owner may decide, and the Tenant shall have no objection to the same.",rent_escalation,rental,team-authored,9
+"Maintenance charges, society charges and any increase in property tax shall be borne by the Licensee in addition to the rent, as revised by the Licensor from time to time.",rent_escalation|unilateral_change,rental,team-authored,10
+"Electricity shall be charged at Rs. 15 per unit as fixed by the Owner, and this rate may be increased by the Owner without notice.",rent_escalation,rental,team-authored,11
+"The Tenant shall give two months' written notice to vacate, whereas the Licensor may terminate this agreement by giving 15 days' notice.",one_sided_notice,rental,team-authored,12
+"The Licensor may ask the Licensee to vacate the premises at any time by giving 10 days' notice, but the Licensee must give not less than 2 months' notice.",one_sided_notice|unilateral_termination,rental,team-authored,13
+"There shall be a lock-in period of 8 months during which the Tenant cannot terminate this agreement; if the Tenant leaves during the lock-in period, rent for the remaining lock-in period shall be payable.",service_bond_lock_in,rental,team-authored,14
+The Tenant agrees that the first 6 months of this agreement are a lock-in period and shall pay the full rent for those months even if the premises are vacated earlier.,service_bond_lock_in,rental,team-authored,15
+"If the Tenant wishes to leave within the first 5 months, two months' rent shall be deducted from the security deposit as penalty.",service_bond_lock_in|deposit_forfeiture,rental,team-authored,16
+"The Owner may terminate this licence immediately and without assigning any reason, and the Licensee shall vacate the premises within 3 days.",unilateral_termination,rental,team-authored,17
+"If the Tenant is found to have guests staying overnight, the Licensor may cancel this agreement forthwith and take possession of the premises.",unilateral_termination,rental,team-authored,18
+Non-payment of rent for even one month shall entitle the Licensor to terminate this agreement and remove the belongings of the Licensee from the premises.,unilateral_termination,rental,team-authored,19
+The Licensor shall have the right to lock the premises and disconnect electricity and water supply if the rent is not paid on the due date.,unilateral_termination,rental,team-authored,20
+"The Owner may change the house rules, visiting hours and other terms of this agreement from time to time, and such changes shall be binding on the Licensee.",unilateral_change,rental,team-authored,21
+"The Licensor may modify the terms of this agreement by sending a message to the Licensee, and continued stay in the premises shall be treated as acceptance.",unilateral_change,rental,team-authored,22
+"The Owner shall not be responsible for any loss, theft or damage to the belongings of the Tenant howsoever caused, including due to the negligence of the Owner.",limitation_of_liability,rental,team-authored,23
+"The Owner shall not be liable for any injury or damage arising from defects in the building, electrical fittings, lift or water leakage.",limitation_of_liability,rental,team-authored,24
+All disputes arising out of this agreement shall be subject to the exclusive jurisdiction of the courts at Bhopal only.,jurisdiction,rental,team-authored,25
+"Any dispute between the parties shall be referred to a sole arbitrator appointed by the Owner, and the award of such arbitrator shall be final and binding.",arbitration,rental,team-authored,26
+"Disputes shall be settled by arbitration under the Arbitration and Conciliation Act, 1996 with the seat of arbitration at New Delhi, and the courts at New Delhi alone shall have jurisdiction.",arbitration|jurisdiction,rental,team-authored,27
+"This Leave and Licence Agreement is made at Bengaluru on this 1st day of November 2026 between Shri Anil Bhosale, residing at Baner, Pune, hereinafter called the Licensor, and Aditya Rao, hereinafter called the Licensee.",,rental,team-authored,28
+"The Licensor is the absolute owner of the flat bearing No. 702, Sai Krupa Apartments, Viman Nagar, Thane, admeasuring about 650 sq. ft. carpet area.",,rental,team-authored,29
+The licence is granted for a period of eleven months commencing from 1 September 2026 and ending on 30 November 2027.,,rental,team-authored,30
+"The Licensee shall pay a monthly licence fee of Rs. 26,000 on or before the 10th day of every English calendar month.",,rental,team-authored,31
+"The Licensee has paid an interest-free refundable security deposit of Rs. 45,000, which shall be returned at the time of vacating the premises after deducting any unpaid dues.",,rental,team-authored,32
+The premises shall be used only for residential purposes by the Licensee and the members of the Licensee's family.,,rental,team-authored,33
+The Licensee shall pay the electricity and water bills as per the actual consumption recorded on the meter.,,rental,team-authored,34
+The Licensee shall keep the premises clean and in good condition and shall not make any structural alterations without the prior written consent of the Licensor.,,rental,team-authored,35
+Either party may terminate this agreement by giving one month's written notice to the other party.,,rental,team-authored,36
+"The Licensor shall carry out major repairs such as plumbing, roof leakage and electrical wiring at the Licensor's own cost within a reasonable time.",,rental,team-authored,37
+The Licensor or the Licensor's representative may inspect the premises at a reasonable hour after giving at least 24 hours' prior notice to the Licensee.,,rental,team-authored,38
+The monthly society maintenance charges and property tax shall be paid by the Licensor.,,rental,team-authored,39
+"The Licensee shall not sub-let, assign or part with possession of the premises or any part of it.",,rental,team-authored,40
+"The security deposit shall be refunded in full within 30 days of the Licensee handing over vacant possession, after deducting unpaid bills, if any, with a written statement of deductions.",,rental,team-authored,41
+The Licensee shall abide by the rules and bye-laws of the Green Valley Co-operative Housing Society.,,rental,team-authored,42
+"This agreement shall be registered with the Sub-Registrar, and the stamp duty and registration charges shall be shared equally by both parties.",,rental,team-authored,43
+"The Licensor has provided the following fixtures in the flat: 3 fans, 4 tube lights, a geyser and a modular kitchen.",,rental,team-authored,44
+The agreement may be renewed for a further period on mutually agreed terms with the written consent of both parties.,,rental,team-authored,45
+"The Licensee shall hand over the premises in the same condition as received, subject to normal wear and tear.",,rental,team-authored,46
+"Nothing in this agreement shall be construed as creating a tenancy in favour of the Licensee, and the Licensee shall have no right, title or interest in the premises.",,rental,team-authored,47
+Both parties have read and understood the terms of this agreement and have signed it in the presence of two witnesses.,,rental,team-authored,48
+"If the licence is renewed, the licence fee for the next period may be increased by not more than 5% with the mutual written consent of both parties.",,rental,team-authored,49
+The Licensee shall be entitled to peaceful use and enjoyment of the premises during the licence period without interference from the Licensor.,,rental,team-authored,50
+"Any notice under this agreement shall be given in writing and delivered by hand, registered post or e-mail to the addresses mentioned above.",,rental,team-authored,51
+The Licensee shall submit a copy of identity proof and the police verification form as required by the local police station.,,rental,team-authored,52
+Pets are allowed in the premises provided they do not cause nuisance to the neighbours.,,rental,team-authored,53
+Parking slot no. 4 in the stilt area is allotted for the use of the Licensee's two-wheeler.,,rental,team-authored,54
+"If the Tenant vacates the flat before the expiry of the lock-in period of 3 months, the entire security deposit of Rs. 36,000 shall stand forfeited.",deposit_forfeiture|service_bond_lock_in,rental,team-authored,0
+"The Owner shall be entitled to deduct any amount from the security deposit as the Owner deems fit, and such decision shall be final and binding on the Licensee.",deposit_forfeiture,rental,team-authored,1
+"The security deposit shall be refunded only after the Owner finds a new tenant for the premises, and no interest shall be payable on it.",deposit_forfeiture,rental,team-authored,2
+"In case of any delay in payment of rent beyond 7 days, the Owner may forfeit the security deposit in full without further notice.",deposit_forfeiture,rental,team-authored,3
+A deduction of one month's rent shall be made from the deposit towards painting and cleaning charges regardless of the condition of the premises at the time of vacating.,deposit_forfeiture,rental,team-authored,4
+"No part of the deposit shall be returned if the Licensee fails to give two months' notice before vacating, while the Licensor may end the licence at any time.",deposit_forfeiture|one_sided_notice,rental,team-authored,5
+"If any damage is found at the time of vacating, the Owner may adjust the cost of repairs from the deposit at rates fixed solely by the Owner.",deposit_forfeiture,rental,team-authored,6
+The monthly licence fee shall be increased by 8% every 6 months during the term of this agreement.,rent_escalation,rental,team-authored,7
+The Licensor reserves the right to revise the licence fee at any time during the licence period depending on market conditions.,rent_escalation|unilateral_change,rental,team-authored,8
+"On renewal, the rent shall be enhanced by such percentage as the Licensor may decide, and the Licensee shall have no objection to the same.",rent_escalation,rental,team-authored,9
+"Electricity shall be charged at Rs. 14 per unit as fixed by the Licensor, and this rate may be increased by the Licensor without notice.",rent_escalation,rental,team-authored,11
+"The Tenant shall give three months' written notice to vacate, whereas the Licensor may terminate this agreement by giving 10 days' notice.",one_sided_notice,rental,team-authored,12
+"The Owner may ask the Tenant to vacate the premises at any time by giving 7 days' notice, but the Tenant must give not less than 2 months' notice.",one_sided_notice|unilateral_termination,rental,team-authored,13
+The Licensee agrees that the first 8 months of this agreement are a lock-in period and shall pay the full rent for those months even if the premises are vacated earlier.,service_bond_lock_in,rental,team-authored,15
+"If the Tenant wishes to leave within the first 3 months, three months' rent shall be deducted from the security deposit as penalty.",service_bond_lock_in|deposit_forfeiture,rental,team-authored,16
+"The Licensor may terminate this licence immediately and without assigning any reason, and the Tenant shall vacate the premises within 15 days.",unilateral_termination,rental,team-authored,17
+"If the Licensee is found to have guests staying overnight, the Owner may cancel this agreement forthwith and take possession of the premises.",unilateral_termination,rental,team-authored,18
+The Owner shall have the right to lock the premises and disconnect electricity and water supply if the rent is not paid on the due date.,unilateral_termination,rental,team-authored,20
+"The Licensor may change the house rules, visiting hours and other terms of this agreement from time to time, and such changes shall be binding on the Licensee.",unilateral_change,rental,team-authored,21
+"The Owner may modify the terms of this agreement by sending a message to the Tenant, and continued stay in the premises shall be treated as acceptance.",unilateral_change,rental,team-authored,22
+"The Licensor shall not be responsible for any loss, theft or damage to the belongings of the Licensee howsoever caused, including due to the negligence of the Licensor.",limitation_of_liability,rental,team-authored,23
+All disputes arising out of this agreement shall be subject to the exclusive jurisdiction of the courts at Guwahati only.,jurisdiction,rental,team-authored,25
+"Any dispute between the parties shall be referred to a sole arbitrator appointed by the Licensor, and the award of such arbitrator shall be final and binding.",arbitration,rental,team-authored,26
+"Disputes shall be settled by arbitration under the Arbitration and Conciliation Act, 1996 with the seat of arbitration at Kolkata, and the courts at Kolkata alone shall have jurisdiction.",arbitration|jurisdiction,rental,team-authored,27
+"This Leave and Licence Agreement is made at Bengaluru on this 15th day of November 2026 between Mr. Prakash Jadhav, residing at Kothrud, Pune, hereinafter called the Licensor, and Rohan Patil, hereinafter called the Licensee.",,rental,team-authored,28
+"The Licensor is the absolute owner of the flat bearing No. A-1104, Om Sai Park, Viman Nagar, Bengaluru, admeasuring about 900 sq. ft. carpet area.",,rental,team-authored,29
+The licence is granted for a period of eleven months commencing from 1 January 2027 and ending on 31 July 2027.,,rental,team-authored,30
+"The Licensee shall pay a monthly licence fee of Rs. 15,500 on or before the 10th day of every English calendar month.",,rental,team-authored,31
+"The Licensee has paid an interest-free refundable security deposit of Rs. 75,000, which shall be returned at the time of vacating the premises after deducting any unpaid dues.",,rental,team-authored,32
+"The Licensor has provided the following fixtures in the flat: 4 fans, 6 tube lights, a geyser and a modular kitchen.",,rental,team-authored,44
+"If the licence is renewed, the licence fee for the next period may be increased by not more than 6% with the mutual written consent of both parties.",,rental,team-authored,49
+"If the Tenant vacates the premises before the expiry of the lock-in period of 3 months, the entire security deposit of Rs. 54,000 shall stand forfeited.",deposit_forfeiture|service_bond_lock_in,rental,team-authored,0
+"The Licensor shall be entitled to deduct any amount from the security deposit as the Licensor deems fit, and such decision shall be final and binding on the Tenant.",deposit_forfeiture,rental,team-authored,1
+"In case of any delay in payment of rent beyond 5 days, the Licensor may forfeit the security deposit in full without further notice.",deposit_forfeiture,rental,team-authored,3
+"No part of the deposit shall be returned if the Licensee fails to give 2 months' notice before vacating, while the Licensor may end the licence at any time.",deposit_forfeiture|one_sided_notice,rental,team-authored,5
+The monthly licence fee shall be increased by 20% every 11 months during the term of this agreement.,rent_escalation,rental,team-authored,7
+"On renewal, the rent shall be enhanced by such percentage as the Owner may decide, and the Licensee shall have no objection to the same.",rent_escalation,rental,team-authored,9
+"Maintenance charges, society charges and any increase in property tax shall be borne by the Licensee in addition to the rent, as revised by the Owner from time to time.",rent_escalation|unilateral_change,rental,team-authored,10
+"Electricity shall be charged at Rs. 15 per unit as fixed by the Licensor, and this rate may be increased by the Licensor without notice.",rent_escalation,rental,team-authored,11
+"The Tenant shall give 2 months' written notice to vacate, whereas the Licensor may terminate this agreement by giving 7 days' notice.",one_sided_notice,rental,team-authored,12
+"The Owner may ask the Tenant to vacate the premises at any time by giving 10 days' notice, but the Tenant must give not less than three months' notice.",one_sided_notice|unilateral_termination,rental,team-authored,13
+"There shall be a lock-in period of 6 months during which the Tenant cannot terminate this agreement; if the Tenant leaves during the lock-in period, rent for the remaining lock-in period shall be payable.",service_bond_lock_in,rental,team-authored,14
+The Licensee agrees that the first 6 months of this agreement are a lock-in period and shall pay the full rent for those months even if the premises are vacated earlier.,service_bond_lock_in,rental,team-authored,15
+"If the Tenant wishes to leave within the first 8 months, two months' rent shall be deducted from the security deposit as penalty.",service_bond_lock_in|deposit_forfeiture,rental,team-authored,16
+"The Licensor may terminate this licence immediately and without assigning any reason, and the Licensee shall vacate the premises within 15 days.",unilateral_termination,rental,team-authored,17
+Non-payment of rent for even one month shall entitle the Owner to terminate this agreement and remove the belongings of the Licensee from the premises.,unilateral_termination,rental,team-authored,19
+"The Licensor may modify the terms of this agreement by sending a message to the Tenant, and continued stay in the premises shall be treated as acceptance.",unilateral_change,rental,team-authored,22
+"The Licensor shall not be liable for any injury or damage arising from defects in the building, electrical fittings, lift or water leakage.",limitation_of_liability,rental,team-authored,24
+All disputes arising out of this agreement shall be subject to the exclusive jurisdiction of the courts at Kolkata only.,jurisdiction,rental,team-authored,25
+"This Leave and Licence Agreement is made at Chennai on this 1st day of July 2027 between Shri Kavita Iyer, residing at Andheri East, Mumbai, hereinafter called the Licensor, and Sneha Joshi, hereinafter called the Licensee.",,rental,team-authored,28
+"The Licensor is the absolute owner of the flat bearing No. B-203, Sunshine Heights, Aundh, Nashik, admeasuring about 720 sq. ft. carpet area.",,rental,team-authored,29
+The licence is granted for a period of eleven months commencing from 1 January 2027 and ending on 30 November 2027.,,rental,team-authored,30
+"The Licensee shall pay a monthly licence fee of Rs. 15,500 on or before the 5th day of every English calendar month.",,rental,team-authored,31
+"The Licensee has paid an interest-free refundable security deposit of Rs. 60,000, which shall be returned at the time of vacating the premises after deducting any unpaid dues.",,rental,team-authored,32
+"The security deposit shall be refunded in full within 7 days of the Licensee handing over vacant possession, after deducting unpaid bills, if any, with a written statement of deductions.",,rental,team-authored,41
+"You will be required to sign a service agreement to serve the Company for a minimum period of two years from the date of joining. If you leave before completing this period, you shall pay the Company an amount of Rs. 3,00,000 as liquidated damages.",service_bond_lock_in,offer_letter,team-authored,55
+"In consideration of the training provided, you agree to work with the Company for at least 30 months, failing which you will reimburse the training cost of Rs. 2,00,000.",service_bond_lock_in,offer_letter,team-authored,56
+Your original educational certificates will be retained by the Company until you complete the bond period of 2 years.,service_bond_lock_in,offer_letter,team-authored,57
+"You shall submit post-dated cheques amounting to Rs. 2,00,000 as security for the service bond, which the Company may present for payment if you resign during the bond period.",service_bond_lock_in,offer_letter,team-authored,58
+"If you resign within 24 months of joining, you shall pay Rs. 2,50,000 to the Company and also serve a notice period of 90 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"For a period of 12 months after leaving the Company, you shall not join or work for any competitor, client or vendor of the Company in any capacity.",non_compete,offer_letter,team-authored,60
+"You shall not, during your employment and for three years thereafter, engage in any business that competes with the business of the Company anywhere in India.",non_compete,offer_letter,team-authored,61
+"You agree not to accept employment with any client of the Company with whom you worked during the last 12 months of your employment, for a period of one year after separation.",non_compete,offer_letter,team-authored,62
+"You shall not solicit or work for any customer of the Company for three years after you leave, irrespective of the reason for separation.",non_compete,offer_letter,team-authored,63
+"You are required to serve a notice period of 90 days upon resignation, whereas the Company may terminate your employment by giving 15 days' notice or salary in lieu thereof.",one_sided_notice,offer_letter,team-authored,64
+"During probation, the Company may terminate your services without notice, but you will be required to give 90 days' notice if you wish to resign.",one_sided_notice|unilateral_termination,offer_letter,team-authored,65
+"The notice period of 120 days cannot be bought out or waived, and any shortfall in the notice period will be recovered at twice your gross salary.",one_sided_notice,offer_letter,team-authored,66
+"The Company reserves the right to change your designation, salary structure, work location, shift timings and other terms of employment at its sole discretion.",unilateral_change,offer_letter,team-authored,67
+"The policies of the Company may be amended from time to time without prior notice, and such amended policies shall form part of your terms of employment.",unilateral_change,offer_letter,team-authored,68
+"You may be transferred to any location, department, group company or client site in India or abroad as decided by the management, and refusal will be treated as misconduct.",unilateral_change,offer_letter,team-authored,69
+Variable pay and bonus are payable at the sole discretion of the management and may be withdrawn at any time without assigning reasons.,unilateral_change,offer_letter,team-authored,70
+The Company may terminate your employment at any time without assigning any reason and without any notice or compensation.,unilateral_termination,offer_letter,team-authored,71
+This offer may be withdrawn by the Company at any time before or after your joining if business requirements change.,unilateral_termination,offer_letter,team-authored,72
+"You consent to the Company collecting, storing and sharing your personal information, including Aadhaar, PAN, bank details and family details, with its group companies, clients, verification agencies and other third parties for any business purpose.",broad_data_sharing,offer_letter,team-authored,73
+"The Company may monitor your personal devices, e-mail and social media accounts and share such information with third parties as it considers necessary.",broad_data_sharing,offer_letter,team-authored,74
+"Your photograph, name and work details may be used by the Company in marketing material and shared with clients and partners without further consent.",broad_data_sharing,offer_letter,team-authored,75
+"The Company shall not be liable for any loss of personal belongings, injury or damage suffered by you while travelling for work or at a client site.",limitation_of_liability,offer_letter,team-authored,76
+"Any dispute relating to your employment shall be referred to arbitration by an arbitrator appointed by the Company, whose decision shall be final.",arbitration,offer_letter,team-authored,77
+All disputes arising out of this appointment shall be subject to the exclusive jurisdiction of the courts in New Delhi.,jurisdiction,offer_letter,team-authored,78
+"We are pleased to offer you the position of Software Developer Trainee at Kalpa Systems Pvt. Ltd., Mumbai, with effect from 1 July 2026.",,offer_letter,team-authored,79
+"Your annual cost to company (CTC) will be Rs. 5,25,000, the break-up of which is given in Annexure A.",,offer_letter,team-authored,80
+"You will be on probation for a period of six months from the date of joining, after which your performance will be reviewed.",,offer_letter,team-authored,81
+"Your normal working hours will be from 9:30 a.m. to 6:30 p.m., Monday to Friday, with a one-hour lunch break.",,offer_letter,team-authored,82
+"You will be entitled to 24 days of paid leave in a calendar year, in addition to the public holidays declared by the Company.",,offer_letter,team-authored,83
+Either party may terminate the employment by giving 60 days' written notice or salary in lieu of notice.,,offer_letter,team-authored,84
+"You will be covered under the Company's group medical insurance policy for Rs. 3,00,000 for yourself, your spouse and children.",,offer_letter,team-authored,85
+Provident Fund and gratuity will be applicable as per the provisions of the relevant statutes.,,offer_letter,team-authored,86
+You shall maintain the confidentiality of all proprietary information of the Company during and after your employment.,,offer_letter,team-authored,87
+"Please report to the HR department at Nimbus Infosoft Pvt. Ltd., Nashik on 1 September 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+Your appointment is subject to satisfactory background verification and a medical fitness certificate.,,offer_letter,team-authored,89
+All intellectual property created by you in the course of your employment shall belong to the Company.,,offer_letter,team-authored,90
+The Company will reimburse reasonable travel and accommodation expenses incurred for official work as per the travel policy.,,offer_letter,team-authored,91
+Your salary will be credited to your bank account on the last working day of each month after statutory deductions such as income tax and professional tax.,,offer_letter,team-authored,92
+Please sign and return a copy of this letter as a token of your acceptance within seven days of receiving it.,,offer_letter,team-authored,93
+"You will be eligible for an annual performance review, and any increment will be based on your performance and the Company's policy.",,offer_letter,team-authored,94
+The Company follows a policy of equal opportunity and does not tolerate harassment of any kind at the workplace.,,offer_letter,team-authored,95
+Your personal data will be processed only for employment-related purposes and in accordance with applicable data protection law.,,offer_letter,team-authored,96
+"You will undergo a classroom training programme for the first eight weeks, and the cost of this training will be borne entirely by the Company.",,offer_letter,team-authored,97
+You will be entitled to maternity or paternity leave as per the Company policy and applicable law.,,offer_letter,team-authored,98
+"This letter, together with its annexures, constitutes the entire terms of your employment with the Company.",,offer_letter,team-authored,99
+"Please carry a copy of your degree certificate, mark sheets, two photographs and a cancelled cheque on the day of joining for verification.",,offer_letter,team-authored,100
+"You will be required to sign a service agreement to serve the Company for a minimum period of 1.5 years from the date of joining. If you leave before completing this period, you shall pay the Company an amount of Rs. 1,50,000 as liquidated damages.",service_bond_lock_in,offer_letter,team-authored,55
+"In consideration of the training provided, you agree to work with the Company for at least 12 months, failing which you shall reimburse the training cost of Rs. 1,00,000.",service_bond_lock_in,offer_letter,team-authored,56
+Your original educational certificates will be retained by the Company until you complete the bond period of two years.,service_bond_lock_in,offer_letter,team-authored,57
+"If you resign within 18 months of joining, you shall pay Rs. 1,00,000 to the Company and also serve a notice period of 120 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"You agree not to accept employment with any client of the Company with whom you worked during the last 24 months of your employment, for a period of one year after separation.",non_compete,offer_letter,team-authored,62
+"You are required to serve a notice period of 60 days upon resignation, whereas the Company may terminate your employment by giving 7 days' notice or salary in lieu thereof.",one_sided_notice,offer_letter,team-authored,64
+"During probation, the Company may terminate your services without notice, but you will be required to give 60 days' notice if you wish to resign.",one_sided_notice|unilateral_termination,offer_letter,team-authored,65
+"The notice period of 90 days cannot be bought out or waived, and any shortfall in the notice period will be recovered at twice your gross salary.",one_sided_notice,offer_letter,team-authored,66
+"We are pleased to offer you the position of Systems Engineer at Nimbus Infosoft Pvt. Ltd., Thane, with effect from 1 September 2026.",,offer_letter,team-authored,79
+"Your annual cost to company (CTC) will be Rs. 6,00,000, the break-up of which is given in Annexure A.",,offer_letter,team-authored,80
+"You will be entitled to 18 days of paid leave in a calendar year, in addition to the public holidays declared by the Company.",,offer_letter,team-authored,83
+"You will be covered under the Company's group medical insurance policy for Rs. 2,00,000 for yourself, your spouse and children.",,offer_letter,team-authored,85
+"Please report to the HR department at Nimbus Infosoft Pvt. Ltd., Nashik on 1 July 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"You will be required to sign a service agreement to serve the Company for a minimum period of two years from the date of joining. If you leave before completing this period, you shall pay the Company an amount of Rs. 2,00,000 as liquidated damages.",service_bond_lock_in,offer_letter,team-authored,55
+"In consideration of the training provided, you agree to work with the Company for at least 12 months, failing which you will reimburse the training cost of Rs. 3,00,000.",service_bond_lock_in,offer_letter,team-authored,56
+"You shall submit post-dated cheques amounting to Rs. 3,00,000 as security for the service bond, which the Company may present for payment if you resign during the bond period.",service_bond_lock_in,offer_letter,team-authored,58
+"If you resign within 12 months of joining, you shall pay Rs. 1,50,000 to the Company and also serve a notice period of 120 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"For a period of 6 months after leaving the Company, you shall not join or work for any competitor, client or vendor of the Company in any capacity.",non_compete,offer_letter,team-authored,60
+"You shall not, during your employment and for one years thereafter, engage in any business that competes with the business of the Company anywhere in India.",non_compete,offer_letter,team-authored,61
+"You shall not solicit or work for any customer of the Company for two years after you leave, irrespective of the reason for separation.",non_compete,offer_letter,team-authored,63
+"You are required to serve a notice period of 120 days upon resignation, whereas the Company may terminate your employment by giving 15 days' notice or salary in lieu thereof.",one_sided_notice,offer_letter,team-authored,64
+All disputes arising out of this appointment shall be subject to the exclusive jurisdiction of the courts in Kolkata.,jurisdiction,offer_letter,team-authored,78
+"We are pleased to offer you the position of Systems Engineer at Vertex Digital Services LLP, Bengaluru, with effect from 15 August 2026.",,offer_letter,team-authored,79
+"You will be entitled to 15 days of paid leave in a calendar year, in addition to the public holidays declared by the Company.",,offer_letter,team-authored,83
+Either party may terminate the employment by giving 30 days' written notice or salary in lieu of notice.,,offer_letter,team-authored,84
+"Please report to the HR department at Nimbus Infosoft Pvt. Ltd., Pune on 1 July 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"You will be required to sign a service agreement to serve the Company for a minimum period of three years from the date of joining. If you leave before completing this period, you shall pay the Company an amount of Rs. 2,50,000 as liquidated damages.",service_bond_lock_in,offer_letter,team-authored,55
+"In consideration of the training provided, you agree to work with the Company for at least 24 months, failing which you will reimburse the training cost of Rs. 1,00,000.",service_bond_lock_in,offer_letter,team-authored,56
+"If you resign within 12 months of joining, you shall pay Rs. 3,00,000 to the Company and also serve a notice period of 90 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"For a period of 24 months after leaving the Company, you shall not join or work for any competitor, client or vendor of the Company in any capacity.",non_compete,offer_letter,team-authored,60
+"During probation, the Company may terminate your services without notice, but you will be required to give 120 days' notice if you wish to resign.",one_sided_notice|unilateral_termination,offer_letter,team-authored,65
+"The notice period of 60 days cannot be bought out or waived, and any shortfall in the notice period will be recovered at twice your gross salary.",one_sided_notice,offer_letter,team-authored,66
+All disputes arising out of this appointment shall be subject to the exclusive jurisdiction of the courts in Chandigarh.,jurisdiction,offer_letter,team-authored,78
+"We are pleased to offer you the position of Graduate Engineer Trainee at Nimbus Infosoft Pvt. Ltd., Bengaluru, with effect from 15 August 2026.",,offer_letter,team-authored,79
+"Please report to the HR department at Orbit Softworks Pvt. Ltd., Hyderabad on 1 September 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"You will be required to sign a service agreement to serve the Company for a minimum period of three years from the date of joining. If you leave before completing this period, you shall pay the Company an amount of Rs. 1,50,000 as liquidated damages.",service_bond_lock_in,offer_letter,team-authored,55
+"In consideration of the training provided, you agree to work with the Company for at least 18 months, failing which you will reimburse the training cost of Rs. 1,00,000.",service_bond_lock_in,offer_letter,team-authored,56
+Your original educational certificates will be retained by the Company until you complete the bond period of 1.5 years.,service_bond_lock_in,offer_letter,team-authored,57
+"You shall submit post-dated cheques amounting to Rs. 1,50,000 as security for the service bond, which the Company may present for payment if you resign during the bond period.",service_bond_lock_in,offer_letter,team-authored,58
+"If you resign within 12 months of joining, you shall pay Rs. 1,50,000 to the Company and also serve a notice period of 60 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"For a period of 18 months after leaving the Company, you shall not join or work for any competitor, client or vendor of the Company in any capacity.",non_compete,offer_letter,team-authored,60
+"You shall not, during your employment and for two years thereafter, engage in any business that competes with the business of the Company anywhere in India.",non_compete,offer_letter,team-authored,61
+"You are required to serve a notice period of 120 days upon resignation, whereas the Company may terminate your employment by giving 7 days' notice or salary in lieu thereof.",one_sided_notice,offer_letter,team-authored,64
+All disputes arising out of this appointment shall be subject to the exclusive jurisdiction of the courts in Guwahati.,jurisdiction,offer_letter,team-authored,78
+"We are pleased to offer you the position of Associate Software Engineer at Vertex Digital Services LLP, Chennai, with effect from 1 September 2026.",,offer_letter,team-authored,79
+"You will be covered under the Company's group medical insurance policy for Rs. 5,00,000 for yourself, your spouse and children.",,offer_letter,team-authored,85
+"Please report to the HR department at Kalpa Systems Pvt. Ltd., Nashik on 15 August 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"In consideration of the training provided, you agree to work with the Company for at least 12 months, failing which you shall reimburse the training cost of Rs. 3,00,000.",service_bond_lock_in,offer_letter,team-authored,56
+"You shall submit post-dated cheques amounting to Rs. 2,50,000 as security for the service bond, which the Company may present for payment if you resign during the bond period.",service_bond_lock_in,offer_letter,team-authored,58
+"If you resign within 30 months of joining, you shall pay Rs. 2,50,000 to the Company and also serve a notice period of 90 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+All disputes arising out of this appointment shall be subject to the exclusive jurisdiction of the courts in Bhopal.,jurisdiction,offer_letter,team-authored,78
+"We are pleased to offer you the position of Graduate Engineer Trainee at Orbit Softworks Pvt. Ltd., Mumbai, with effect from 1 September 2026.",,offer_letter,team-authored,79
+"Please report to the HR department at Kalpa Systems Pvt. Ltd., Nashik on 1 September 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"You will be required to sign a service agreement to serve the Company for a minimum period of 1.5 years from the date of joining. If you leave before completing this period, you shall pay the Company an amount of Rs. 3,00,000 as liquidated damages.",service_bond_lock_in,offer_letter,team-authored,55
+"In consideration of the training provided, you agree to work with the Company for at least 24 months, failing which you shall reimburse the training cost of Rs. 3,00,000.",service_bond_lock_in,offer_letter,team-authored,56
+"You shall submit post-dated cheques amounting to Rs. 1,00,000 as security for the service bond, which the Company may present for payment if you resign during the bond period.",service_bond_lock_in,offer_letter,team-authored,58
+"If you resign within 24 months of joining, you shall pay Rs. 1,00,000 to the Company and also serve a notice period of 120 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"You shall not solicit or work for any customer of the Company for one years after you leave, irrespective of the reason for separation.",non_compete,offer_letter,team-authored,63
+"We are pleased to offer you the position of Systems Engineer at Orbit Softworks Pvt. Ltd., Thane, with effect from 1 January 2027.",,offer_letter,team-authored,79
+"Your annual cost to company (CTC) will be Rs. 3,60,000, the break-up of which is given in Annexure A.",,offer_letter,team-authored,80
+"Please report to the HR department at Vertex Digital Services LLP, Nagpur on 1 July 2026 at 9:30 a.m. with the documents listed in Annexure B.",,offer_letter,team-authored,88
+"You will be required to sign a service agreement to serve the Company for a minimum period of two years from the date of joining. If you leave before completing this period, you shall pay the Company an amount of Rs. 1,50,000 as liquidated damages.",service_bond_lock_in,offer_letter,team-authored,55
+"In consideration of the training provided, you agree to work with the Company for at least 24 months, failing which you shall reimburse the training cost of Rs. 1,50,000.",service_bond_lock_in,offer_letter,team-authored,56
+"If you resign within 30 months of joining, you shall pay Rs. 2,00,000 to the Company and also serve a notice period of 90 days.",service_bond_lock_in|one_sided_notice,offer_letter,team-authored,59
+"By downloading, installing or using StudyNest, you agree to be bound by these Terms, whether or not you have read them.",contract_by_using,tos,team-authored,101
+Your continued access to the platform constitutes acceptance of these Terms and any future updates to them.,contract_by_using|unilateral_change,tos,team-authored,102
+"We may revise these Terms at any time by posting the updated version on this page, and you are responsible for checking it regularly.",unilateral_change,tos,team-authored,103
+"Chatterly reserves the right to modify or discontinue the service, its features or its pricing at any time without notice.",unilateral_change,tos,team-authored,104
+"We may suspend or terminate your account at any time, for any reason or no reason, without notice or liability to you.",unilateral_termination,tos,team-authored,105
+"We may remove or disable access to any content that you upload at our sole discretion, without giving any reason.",content_removal,tos,team-authored,106
+"QuickLoanz may delete your posts, photos and messages if we believe they violate these Terms, and we are not obliged to keep a copy.",content_removal,tos,team-authored,107
+"If your account is terminated, all your data, wallet balance and content may be permanently deleted without any refund.",unilateral_termination|content_removal,tos,team-authored,108
+"To the maximum extent permitted by law, QuickLoanz shall not be liable for any indirect, incidental, special or consequential damages, loss of data or loss of profits.",limitation_of_liability,tos,team-authored,109
+"In no event shall our total liability to you exceed USD 50 or the amount you paid us in the last three months, whichever is lower.",limitation_of_liability,tos,team-authored,110
+"The service is provided on an 'as is' and 'as available' basis without warranties of any kind, and you use it at your own risk.",limitation_of_liability,tos,team-authored,111
+"These Terms shall be governed by the laws of the State of New York, without regard to its conflict of law provisions.",choice_of_law,tos,team-authored,112
+"These Terms are governed by the laws of England and Wales, and you submit to the exclusive jurisdiction of the courts of San Francisco.",choice_of_law|jurisdiction,tos,team-authored,113
+"Any claim against QuickLoanz must be brought exclusively in the courts located at Lucknow, and you waive any objection to such venue.",jurisdiction,tos,team-authored,114
+"All disputes shall be resolved through binding individual arbitration, and you waive your right to participate in a class action.",arbitration,tos,team-authored,115
+"Any dispute arising out of the use of the app shall be finally settled by arbitration administered by the Singapore International Arbitration Centre, with the seat of arbitration at Singapore.",arbitration,tos,team-authored,116
+"We may share your personal information, including contacts, location and usage data, with our partners, advertisers and affiliates for marketing and other purposes.",broad_data_sharing,tos,team-authored,117
+"By using the app you allow us to access your contacts, photos, microphone and location, and to share this data with third-party service providers.",broad_data_sharing,tos,team-authored,118
+Your data may be transferred to and stored in any country where we or our partners operate and may be retained indefinitely.,broad_data_sharing,tos,team-authored,119
+"We may sell or transfer your personal data as part of a merger, acquisition or sale of assets, or to any third party we choose.",broad_data_sharing,tos,team-authored,120
+These Terms of Service explain the rules for using the Chatterly mobile application and website operated by Zentrix Technologies Pvt. Ltd..,,tos,team-authored,121
+"You must be at least 18 years old, or have the consent of a parent or guardian, to create an account.",,tos,team-authored,122
+You are responsible for keeping your password confidential and for all activity under your account.,,tos,team-authored,123
+"You may delete your account at any time from the Settings page, and we will delete your personal data within 30 days, except where retention is required by law.",,tos,team-authored,124
+"We will notify you by e-mail at least 30 days before any material change to these Terms takes effect, and you may close your account if you do not agree.",,tos,team-authored,125
+You retain ownership of the content you post and grant us a limited licence to display it within the service.,,tos,team-authored,126
+"We collect only the information needed to provide the service, such as your name, e-mail address and phone number.",,tos,team-authored,127
+You can request a copy of your personal data or ask us to correct it by writing to our Grievance Officer at support@fitbuddy.example.,,tos,team-authored,128
+"You agree not to use the service to post unlawful, abusive or infringing content.",,tos,team-authored,129
+"Payments are processed by a third-party payment gateway, and we do not store your full card details.",,tos,team-authored,130
+Refunds for cancelled subscriptions will be processed within 7 working days to the original payment method.,,tos,team-authored,131
+"We use cookies to keep you signed in and to understand how the app is used, and you can manage cookie preferences in Settings.",,tos,team-authored,132
+"If you have a complaint, our Grievance Officer will acknowledge it within 24 hours and resolve it within 15 days.",,tos,team-authored,133
+Premium features are available on a monthly subscription that you can cancel at any time.,,tos,team-authored,134
+We will not share your personal data with advertisers without your explicit consent.,,tos,team-authored,135
+We use industry-standard encryption to protect your data in transit and at rest.,,tos,team-authored,136
+Children under 13 are not permitted to use the service.,,tos,team-authored,137
+"By downloading, installing or using SnapKart, you agree to be bound by these Terms, whether or not you have read them.",contract_by_using,tos,team-authored,101
+"SnapKart reserves the right to modify or discontinue the service, its features or its pricing at any time without notice.",unilateral_change,tos,team-authored,104
+"the App may delete your posts, photos and messages if we believe they violate these Terms, and we are not obliged to keep a copy.",content_removal,tos,team-authored,107
+"To the maximum extent permitted by law, StudyNest shall not be liable for any indirect, incidental, special or consequential damages, loss of data or loss of profits.",limitation_of_liability,tos,team-authored,109
+"In no event shall our total liability to you exceed USD 100 or the amount you paid us in the last three months, whichever is lower.",limitation_of_liability,tos,team-authored,110
+"These Terms shall be governed by the laws of the State of Delaware, without regard to its conflict of law provisions.",choice_of_law,tos,team-authored,112
+"These Terms are governed by the laws of England and Wales, and you submit to the exclusive jurisdiction of the courts of Singapore.",choice_of_law|jurisdiction,tos,team-authored,113
+"Any claim against QuickLoanz must be brought exclusively in the courts located at Kolkata, and you waive any objection to such venue.",jurisdiction,tos,team-authored,114
+"Any dispute arising out of the use of the app shall be finally settled by arbitration administered by the Singapore International Arbitration Centre, with the seat of arbitration at San Francisco.",arbitration,tos,team-authored,116
+These Terms of Service explain the rules for using the StudyNest mobile application and website operated by Kalpa Systems Pvt. Ltd..,,tos,team-authored,121
+You can request a copy of your personal data or ask us to correct it by writing to our Grievance Officer at privacy@chatterly.example.,,tos,team-authored,128
+"By downloading, installing or using FitBuddy, you agree to be bound by these Terms, whether or not you have read them.",contract_by_using,tos,team-authored,101
+"QuickLoanz reserves the right to modify or discontinue the service, its features or its pricing at any time without notice.",unilateral_change,tos,team-authored,104
+"StudyNest may delete your posts, photos and messages if we believe they violate these Terms, and we are not obliged to keep a copy.",content_removal,tos,team-authored,107
+"To the maximum extent permitted by law, the App shall not be liable for any indirect, incidental, special or consequential damages, loss of data or loss of profits.",limitation_of_liability,tos,team-authored,109
+"These Terms are governed by the laws of the State of California, USA, and you submit to the exclusive jurisdiction of the courts of Singapore.",choice_of_law|jurisdiction,tos,team-authored,113
+"Any claim against QuickLoanz must be brought exclusively in the courts located at Bhopal, and you waive any objection to such venue.",jurisdiction,tos,team-authored,114
+"Any dispute arising out of the use of the app shall be finally settled by arbitration administered by JAMS, with the seat of arbitration at San Francisco.",arbitration,tos,team-authored,116
+These Terms of Service explain the rules for using the the App mobile application and website operated by Nimbus Infosoft Pvt. Ltd..,,tos,team-authored,121
+"To the maximum extent permitted by law, SnapKart shall not be liable for any indirect, incidental, special or consequential damages, loss of data or loss of profits.",limitation_of_liability,tos,team-authored,109
+"In no event shall our total liability to you exceed Rs. 500 or the amount you paid us in the last three months, whichever is lower.",limitation_of_liability,tos,team-authored,110
+"These Terms shall be governed by the laws of the State of California, without regard to its conflict of law provisions.",choice_of_law,tos,team-authored,112
+"These Terms are governed by the laws of Singapore, and you submit to the exclusive jurisdiction of the courts of London.",choice_of_law|jurisdiction,tos,team-authored,113
+"Any claim against SnapKart must be brought exclusively in the courts located at Guwahati, and you waive any objection to such venue.",jurisdiction,tos,team-authored,114
+These Terms of Service explain the rules for using the StudyNest mobile application and website operated by Vertex Digital Services LLP.,,tos,team-authored,121
+You can request a copy of your personal data or ask us to correct it by writing to our Grievance Officer at grievance@studynest.example.,,tos,team-authored,128
+"SnapKart may delete your posts, photos and messages if we believe they violate these Terms, and we are not obliged to keep a copy.",content_removal,tos,team-authored,107
+"These Terms are governed by the laws of Singapore, and you submit to the exclusive jurisdiction of the courts of Singapore.",choice_of_law|jurisdiction,tos,team-authored,113
+"Any dispute arising out of the use of the app shall be finally settled by arbitration administered by JAMS, with the seat of arbitration at London.",arbitration,tos,team-authored,116
+These Terms of Service explain the rules for using the QuickLoanz mobile application and website operated by Orbit Softworks Pvt. Ltd..,,tos,team-authored,121
+"In no event shall our total liability to you exceed Rs. 1,000 or the amount you paid us in the last three months, whichever is lower.",limitation_of_liability,tos,team-authored,110
+"These Terms are governed by the laws of the State of California, USA, and you submit to the exclusive jurisdiction of the courts of San Francisco.",choice_of_law|jurisdiction,tos,team-authored,113
+"Any claim against FitBuddy must be brought exclusively in the courts located at Kolkata, and you waive any objection to such venue.",jurisdiction,tos,team-authored,114
+These Terms of Service explain the rules for using the StudyNest mobile application and website operated by Orbit Softworks Pvt. Ltd..,,tos,team-authored,121
+"By downloading, installing or using the App, you agree to be bound by these Terms, whether or not you have read them.",contract_by_using,tos,team-authored,101
+"StudyNest reserves the right to modify or discontinue the service, its features or its pricing at any time without notice.",unilateral_change,tos,team-authored,104
+"Any claim against Chatterly must be brought exclusively in the courts located at Lucknow, and you waive any objection to such venue.",jurisdiction,tos,team-authored,114
+These Terms of Service explain the rules for using the the App mobile application and website operated by Orbit Softworks Pvt. Ltd..,,tos,team-authored,121
+"By downloading, installing or using QuickLoanz, you agree to be bound by these Terms, whether or not you have read them.",contract_by_using,tos,team-authored,101
+"These Terms are governed by the laws of England and Wales, and you submit to the exclusive jurisdiction of the courts of London.",choice_of_law|jurisdiction,tos,team-authored,113
+"Any claim against Chatterly must be brought exclusively in the courts located at Bhopal, and you waive any objection to such venue.",jurisdiction,tos,team-authored,114
+"Any dispute arising out of the use of the app shall be finally settled by arbitration administered by the Singapore International Arbitration Centre, with the seat of arbitration at London.",arbitration,tos,team-authored,116
+These Terms of Service explain the rules for using the SnapKart mobile application and website operated by Orbit Softworks Pvt. Ltd..,,tos,team-authored,121

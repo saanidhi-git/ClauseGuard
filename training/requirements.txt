@@ -1,0 +1,4 @@
+-r ../backend/requirements.txt
+datasets==5.1.0
+pandas==3.0.6
+matplotlib==3.11.2
