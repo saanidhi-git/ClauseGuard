@@ -1,4 +1,4 @@
-"""Built-in demo documents."""
+# Built-in demo documents
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session
@@ -10,7 +10,7 @@ from .documents import create_document
 
 router = APIRouter(prefix="/api/samples", tags=["samples"])
 
-# kind: "risky" samples show red flags, "fair" samples show what a balanced document looks like
+# risky samples have red flags, fair samples show a balanced document
 SAMPLES = {
     "rental_agreement": {"title": "Leave and Licence Agreement (Pune)", "doc_type": "rental", "kind": "risky",
                          "description": "11-month flat rental in Pune with lock-in and deposit terms"},

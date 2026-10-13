@@ -1,11 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
-import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { ArrowRight, Beaker, Database, FlaskConical, Loader2, Table2 } from "lucide-react";
+import { ArrowRight, Beaker, BookOpen, Database, FlaskConical, Loader2 } from "lucide-react";
 import { api, type ClassifyResult, type Insights as InsightsT } from "../api";
 import { ConfidenceBar, RiskBadge } from "../components/Risk";
 import { useToast } from "../components/Toast";
 
-// colour follows the model, never its rank
+// one colour per model
 const MODEL_COLOR: Record<string, string> = {
   "baseline-lr": "var(--series-1)",
   "baseline-nb": "var(--series-2)",
@@ -15,6 +14,14 @@ const MODEL_COLOR: Record<string, string> = {
 const MODEL_ORDER = ["baseline-lr", "baseline-nb", "legal-bert", "hybrid"];
 const PIPELINE = ["Upload", "Extract text", "Segment clauses", "Preprocess", "Classify (14 labels)", "Risk score", "Explain + key facts", "RAG Q&A"];
 const EXAMPLE = "If the Licensee vacates the flat before 6 months, the entire security deposit of Rs. 50,000 shall stand forfeited.";
+const METRIC_HELP = [
+  ["Precision", "Of the clauses the model flagged, how many were really risky."],
+  ["Recall", "Of the clauses that were really risky, how many the model caught."],
+  ["F1", "The balance of precision and recall (their harmonic mean)."],
+  ["Micro average", "Counts every prediction together, so common labels weigh more."],
+  ["Macro average", "Averages each label equally, so rare labels count just as much."],
+  ["Confusion matrix", "TP = correctly flagged, FP = wrongly flagged, FN = missed, TN = correctly left alone."],
+];
 const pct = (v: number) => `${(v * 100).toFixed(1)}`;
 
 export default function Insights() {
@@ -23,7 +30,6 @@ export default function Insights() {
   const [dataset, setDataset] = useState("unfair_tos_test");
   const [cmModel, setCmModel] = useState("baseline-lr");
   const [cmLabel, setCmLabel] = useState("limitation_of_liability");
-  const [showTable, setShowTable] = useState(false);
   const [text, setText] = useState(EXAMPLE);
   const [result, setResult] = useState<ClassifyResult | null>(null);
   const [busy, setBusy] = useState(false);
@@ -41,19 +47,6 @@ export default function Insights() {
     () => MODEL_ORDER.filter((m) => metrics?.models[m]?.available && metrics.models[m].results[dataset]),
     [metrics, dataset],
   );
-
-  const f1Rows = useMemo(() => {
-    if (!metrics) return [];
-    const first = models[0] && metrics.models[models[0]].results[dataset];
-    if (!first) return [];
-    return Object.keys(first.per_label)
-      .filter((l) => first.per_label[l].support > 0)
-      .map((l) => {
-        const row: Record<string, string | number> = { label: names[l] ?? l };
-        models.forEach((m) => (row[m] = +(metrics.models[m].results[dataset].per_label[l].f1 * 100).toFixed(1)));
-        return row;
-      });
-  }, [metrics, models, dataset, names]);
 
   const classify = async () => {
     if (text.trim().length < 3) return;
@@ -81,7 +74,6 @@ export default function Insights() {
         )}
         {data && <span className="text-sm text-slate-500">Model in use: <b>{data.model_used}</b></span>}
       </div>
-      <p className="mt-1 text-sm text-slate-500">For evaluators: how the classifier was trained and how well it does. All numbers are computed by training/evaluate.py.</p>
 
       <section className="card mt-6 p-5" aria-label="Pipeline">
         <h2 className="font-semibold text-slate-900 dark:text-white">Pipeline</h2>
@@ -163,51 +155,19 @@ export default function Insights() {
             </table>
           </section>
 
-          <div className="mt-4 grid gap-4 lg:grid-cols-3">
-            <section className="card p-5 lg:col-span-2" aria-label="Per-label F1">
-              <div className="flex items-center justify-between">
-                <h2 className="font-semibold text-slate-900 dark:text-white">Per-label F1 (%)</h2>
-                <button className="btn-ghost px-2.5 py-1.5 text-xs" onClick={() => setShowTable(!showTable)}>
-                  <Table2 className="h-3.5 w-3.5" aria-hidden /> {showTable ? "Chart" : "Table"}
-                </button>
-              </div>
-              {showTable ? (
-                <table className="mt-3 w-full text-sm">
-                  <thead>
-                    <tr className="text-left text-slate-500">
-                      <th className="py-1.5 font-medium">Label</th>
-                      {models.map((m) => <th key={m} className="py-1.5 text-right font-medium">{metrics.models[m].display_name}</th>)}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {f1Rows.map((r) => (
-                      <tr key={r.label as string} className="border-t border-slate-100 dark:border-slate-800">
-                        <td className="py-1.5">{r.label}</td>
-                        {models.map((m) => <td key={m} className="py-1.5 text-right tabular-nums">{r[m]}</td>)}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              ) : (
-                <div className="mt-3" style={{ height: Math.max(260, f1Rows.length * 44) }}>
-                  <ResponsiveContainer>
-                    <BarChart data={f1Rows} layout="vertical" margin={{ left: 8, right: 16 }} barGap={2} barCategoryGap="22%">
-                      <CartesianGrid horizontal={false} stroke="var(--chart-grid)" />
-                      <XAxis type="number" domain={[0, 100]} tick={{ fill: "var(--chart-text)", fontSize: 12 }} stroke="var(--chart-grid)" />
-                      <YAxis type="category" dataKey="label" width={150} tick={{ fill: "var(--chart-text)", fontSize: 12 }} stroke="var(--chart-grid)" />
-                      <Tooltip
-                        cursor={{ fill: "rgba(148,163,184,0.12)" }}
-                        contentStyle={{ borderRadius: 12, fontSize: 12, background: "var(--tooltip-bg, #fff)", color: "#0f172a" }}
-                        formatter={(v: number, k: string) => [`${v}%`, metrics.models[k]?.display_name ?? k]}
-                      />
-                      <Legend formatter={(k: string) => <span style={{ color: "var(--chart-text)" }}>{metrics.models[k]?.display_name ?? k}</span>} />
-                      {models.map((m) => (
-                        <Bar key={m} dataKey={m} fill={MODEL_COLOR[m]} radius={[0, 4, 4, 0]} maxBarSize={12} />
-                      ))}
-                    </BarChart>
-                  </ResponsiveContainer>
-                </div>
-              )}
+          <div className="mt-4 grid gap-4 lg:grid-cols-2">
+            <section className="card p-5" aria-label="What the metrics mean">
+              <h2 className="flex items-center gap-2 font-semibold text-slate-900 dark:text-white">
+                <BookOpen className="h-4 w-4 text-accent-600" aria-hidden /> What the metrics mean
+              </h2>
+              <dl className="mt-3 space-y-2.5 text-sm">
+                {METRIC_HELP.map(([k, v]) => (
+                  <div key={k}>
+                    <dt className="font-medium text-slate-900 dark:text-white">{k}</dt>
+                    <dd className="text-slate-600 dark:text-slate-400">{v}</dd>
+                  </div>
+                ))}
+              </dl>
             </section>
 
             <section className="card p-5" aria-label="Confusion matrix">

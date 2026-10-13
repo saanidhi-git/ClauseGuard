@@ -1,4 +1,4 @@
-"""ClauseGuard FastAPI app: API under /api and the built React app at /."""
+# ClauseGuard backend: serves the API and the website
 
 import logging
 from contextlib import asynccontextmanager

@@ -1,4 +1,4 @@
-"""Key facts extraction: spaCy NER + regex rules for Indian agreements."""
+# Key facts: rent, deposit, notice period, parties and more
 
 import re
 from typing import Dict, List, Optional
@@ -19,7 +19,6 @@ DURATION_RE = re.compile(
 PERCENT_RE = re.compile(r"\b\d{1,2}(?:\.\d+)?\s?(?:%|percent|per cent)", re.I)
 
 FACT_RULES = [
-    # (fact key, clause keywords, value type)
     ("rent", r"\b(monthly rent|rent of|licen[cs]e fee|rent shall|rent payable|monthly compensation|as rent|rent amount|rent is)\b", "money"),
     ("deposit", r"\b(security deposit|deposit of|interest[- ]free deposit|refundable deposit)\b", "money"),
     ("salary", r"\b(ctc|cost to company|annual compensation|gross salary|annual salary|fixed pay)\b", "money"),
@@ -48,8 +47,8 @@ def _first(pattern: re.Pattern, text: str) -> Optional[str]:
     return m.group(0).strip() if m else None
 
 
+# convert a duration to days
 def _days(duration: str) -> float:
-    """Rough length of a duration in days, used to compare notice periods."""
     m = re.match(r"(\d+|[a-z-]+)", duration.lower())
     num = m.group(1) if m else "1"
     n = float(num) if num.isdigit() else WORD_NUM.get(num, 1)
@@ -57,15 +56,15 @@ def _days(duration: str) -> float:
     return n * unit
 
 
+# find the notice period in a clause
 def notice_period(text: str) -> Optional[str]:
-    """Longest duration mentioned close to the word 'notice' (the one you must give)."""
     near = [m.group(0).strip() for m in DURATION_RE.finditer(text)
             if re.search(r"notice", text[max(0, m.start() - 40):m.end() + 40], re.I)]
     return max(near, key=_days) if near else None
 
 
+# amount, period and percentage in a clause
 def clause_facts(text: str, label: Optional[str] = None) -> Dict[str, Optional[str]]:
-    """First amount, duration and percentage in a single clause."""
     period = notice_period(text) if label == "one_sided_notice" else None
     return {"amount": _first(MONEY_RE, text), "period": period or _first(DURATION_RE, text),
             "percent": _first(PERCENT_RE, text)}
@@ -112,8 +111,8 @@ def _parties(clauses: List[dict], doc_ents: List[tuple]) -> List[str]:
     return clean[:4]
 
 
+# collect key facts for the whole document
 def extract_key_facts(clauses: List[dict], doc_type: str) -> Dict[str, dict]:
-    """Return {fact: {label, value, clause_id}} for the document."""
     facts: Dict[str, dict] = {}
     for c in clauses:
         text = c["text"]

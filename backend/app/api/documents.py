@@ -1,4 +1,4 @@
-"""Upload, list, read and delete documents."""
+# Upload, list, read and delete documents
 
 from typing import Optional
 
@@ -19,9 +19,9 @@ router = APIRouter(prefix="/api/documents", tags=["documents"])
 DOC_TYPE_NAMES = {"rental": "Rental agreement", "offer_letter": "Job offer letter", "tos": "Terms of Service"}
 
 
+# save a new document and analyse it
 def create_document(session: Session, extracted: Extracted, doc_type: str, title: str,
                     filename: Optional[str], background: Optional[BackgroundTasks]) -> Document:
-    """Store a new document and analyse it now, or in the background if it is long."""
     if doc_type not in DOC_TYPES:
         doc_type = detect_doc_type(extracted.text)
     doc = Document(title=title[:200] or "Untitled document", doc_type=doc_type, filename=filename,
@@ -67,9 +67,9 @@ def get_doc_or_404(session: Session, doc_id: int) -> Document:
     return doc
 
 
+# upload a file or pasted text
 @router.post("")
 async def upload(request: Request, background: BackgroundTasks, session: Session = Depends(get_session)):
-    """Upload a file (multipart: file, doc_type, title) or JSON {text, doc_type, title}."""
     ctype = request.headers.get("content-type", "")
     try:
         if ctype.startswith("multipart/form-data"):

@@ -1,4 +1,4 @@
-"""Use a throwaway database for tests (set before the app is imported)."""
+# use a separate database for tests
 
 import os
 import tempfile

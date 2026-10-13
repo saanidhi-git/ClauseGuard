@@ -1,4 +1,4 @@
-"""API smoke tests on the three built-in samples."""
+# API tests using the sample documents
 
 import pytest
 from fastapi.testclient import TestClient

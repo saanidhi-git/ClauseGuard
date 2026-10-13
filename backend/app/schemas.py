@@ -1,4 +1,4 @@
-"""Request bodies for the API."""
+# Request bodies for the API
 
 from typing import Literal, Optional
 

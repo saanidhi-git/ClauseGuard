@@ -1,4 +1,4 @@
-"""Risk categories used by ClauseGuard (8 from UNFAIR-ToS + 6 India-specific)."""
+# The 14 risk categories
 
 from typing import Dict, List
 
@@ -146,6 +146,6 @@ CATEGORIES: Dict[str, dict] = {
 SEVERITY_NAME = {3: "High", 2: "Medium", 1: "Low"}
 
 
+# categories that apply to a document type
 def labels_for_doc_type(doc_type: str) -> List[str]:
-    """Return the labels that make sense for a document type."""
     return [k for k in LABELS if doc_type in CATEGORIES[k]["doc_types"]]

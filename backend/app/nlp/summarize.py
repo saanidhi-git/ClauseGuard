@@ -1,4 +1,4 @@
-"""Five-bullet summary: TextRank over clause embeddings (or the LLM)."""
+# Five-point summary of the document
 
 from typing import List
 
@@ -19,8 +19,8 @@ def _shorten(text: str, words: int = 40) -> str:
     return text if len(parts) <= words else " ".join(parts[:words]) + "…"
 
 
+# TextRank: pick the most important clauses
 def textrank(clauses: List[dict], n: int = 5) -> List[str]:
-    """Pick the n most central clauses and keep their document order."""
     cands = [c for c in clauses if len(c["text"].split()) >= 10]
     if not cands:
         return [_shorten(c["text"]) for c in clauses[:n]]
@@ -35,14 +35,13 @@ def textrank(clauses: List[dict], n: int = 5) -> List[str]:
     score = np.ones(len(cands)) / len(cands)
     for _ in range(50):
         score = 0.15 / len(cands) + 0.85 * (m.T @ score)
-    # small boost for risky clauses so the summary mentions them
+    # prefer risky clauses
     boost = np.array([1.0 + 0.4 * {"High": 2, "Medium": 1}.get(c.get("risk_level", ""), 0) for c in cands])
     top = sorted(np.argsort(-(score * boost))[:n])
     return [_shorten(cands[i]["text"]) for i in top]
 
 
 def summarize(clauses: List[dict], use_llm: bool = False) -> List[str]:
-    """Return five bullet strings."""
     if use_llm and clauses:
         text = "\n".join(f"{c['number']}. {c['text']}" for c in clauses)[:9000]
         data = parse_json(complete(LLM_SYSTEM, text))

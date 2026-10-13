@@ -1,4 +1,4 @@
-"""Model Insights: metrics, dataset stats and single-clause testing."""
+# Model Insights page data
 
 import json
 

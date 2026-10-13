@@ -1,9 +1,4 @@
-"""Train the TF-IDF baselines (Logistic Regression and Multinomial Naive Bayes).
-
-Data: UNFAIR-ToS train + ClauseGuard-IN train, merged into 14 labels.
-Thresholds are tuned on a dev set (UNFAIR-ToS validation + held-out ClauseGuard-IN groups),
-then the final model is refit on all training data.
-"""
+# Train the TF-IDF baseline models
 
 import time
 
@@ -18,7 +13,7 @@ from sklearn.pipeline import Pipeline
 from common import LABELS, MODELS, group_holdout, load_in, load_unfair_tos, tune_thresholds
 from app.nlp.preprocess import clean_for_model
 
-IN_OVERSAMPLE = 3  # ClauseGuard-IN is small, so its rows are repeated to balance UNFAIR-ToS
+IN_OVERSAMPLE = 3  # repeat the small Indian dataset
 
 
 def make_pipeline(kind: str) -> Pipeline:

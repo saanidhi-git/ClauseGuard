@@ -1,4 +1,4 @@
-"""Optional LLM client (Groq or Gemini) with a SQLite cache."""
+# Optional LLM (Groq or Gemini)
 
 import hashlib
 import json
@@ -41,8 +41,8 @@ def _call(system: str, user: str) -> str:
     return r.json()["candidates"][0]["content"]["parts"][0]["text"]
 
 
+# ask the LLM, or return None if it is not set up
 def complete(system: str, user: str, use_cache: bool = True) -> Optional[str]:
-    """Return the LLM reply, or None if no key is set or the call fails."""
     if not llm_enabled():
         return None
     key = hashlib.sha256(f"{LLM_PROVIDER}|{system}|{user}".encode("utf-8")).hexdigest()
@@ -54,7 +54,7 @@ def complete(system: str, user: str, use_cache: bool = True) -> Optional[str]:
     try:
         reply = _call(system, user)
     except Exception as exc:
-        # never log the key, only the error type
+        # never log the API key
         log.warning("LLM call failed (%s)", type(exc).__name__)
         return None
     if use_cache:
@@ -65,7 +65,6 @@ def complete(system: str, user: str, use_cache: bool = True) -> Optional[str]:
 
 
 def parse_json(reply: Optional[str]) -> Optional[dict]:
-    """Pull the first JSON object out of a reply."""
     if not reply:
         return None
     m = re.search(r"\{.*\}", reply, re.S)

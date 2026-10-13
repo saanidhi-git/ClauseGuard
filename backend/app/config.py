@@ -1,4 +1,4 @@
-"""App settings read from environment variables."""
+# App settings read from environment variables
 
 import os
 from pathlib import Path
@@ -8,7 +8,7 @@ ROOT_DIR = BACKEND_DIR.parent
 
 
 def _load_env_file() -> None:
-    # minimal .env loader so we don't need python-dotenv
+    # read the .env file if there is one
     env_path = ROOT_DIR / ".env"
     if not env_path.exists():
         return
@@ -28,7 +28,7 @@ SAMPLES_DIR = DATA_DIR / "samples"
 FRONTEND_DIST = Path(os.getenv("FRONTEND_DIST", ROOT_DIR / "frontend" / "dist"))
 DB_PATH = Path(os.getenv("DB_PATH", BACKEND_DIR / "clauseguard.db"))
 
-LLM_PROVIDER = os.getenv("LLM_PROVIDER", "").strip().lower()  # groq | gemini | ""
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "").strip().lower()
 LLM_API_KEY = os.getenv("LLM_API_KEY", "").strip()
 LLM_MODEL = os.getenv("LLM_MODEL", "").strip()
 LEGALBERT_HUB_ID = os.getenv("LEGALBERT_HUB_ID", "").strip()
@@ -43,5 +43,4 @@ DISCLAIMER = "ClauseGuard gives information, not legal advice."
 
 
 def llm_enabled() -> bool:
-    """True when an LLM provider and key are configured."""
     return LLM_PROVIDER in {"groq", "gemini"} and bool(LLM_API_KEY)

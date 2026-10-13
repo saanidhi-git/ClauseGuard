@@ -1,4 +1,4 @@
-"""Shared data loading for training and evaluation."""
+# Data loading shared by training and evaluation
 
 import random
 import re
@@ -23,8 +23,8 @@ def _key(name: str) -> str:
     return re.sub(r"[^a-z]+", "_", name.lower()).strip("_")
 
 
+# load UNFAIR-ToS with our 14 labels
 def load_unfair_tos(split: str) -> Tuple[List[str], np.ndarray]:
-    """UNFAIR-ToS split mapped into the 14-label space (label order read from the dataset)."""
     from datasets import load_dataset
 
     ds = load_dataset("coastalcph/lex_glue", "unfair_tos", split=split)
@@ -37,8 +37,8 @@ def load_unfair_tos(split: str) -> Tuple[List[str], np.ndarray]:
     return list(ds["text"]), y
 
 
+# load ClauseGuard-IN
 def load_in(split: str) -> Tuple[List[str], np.ndarray, pd.DataFrame]:
-    """ClauseGuard-IN split ('train', 'test' or 'all')."""
     name = "clauseguard_in.csv" if split == "all" else f"clauseguard_in_{split}.csv"
     df = pd.read_csv(DATA / name, keep_default_na=False)
     y = np.zeros((len(df), len(LABELS)), dtype=int)
@@ -48,8 +48,8 @@ def load_in(split: str) -> Tuple[List[str], np.ndarray, pd.DataFrame]:
     return list(df["text"]), y, df
 
 
+# pick a small dev set
 def group_holdout(df: pd.DataFrame, frac: float = 0.2) -> np.ndarray:
-    """Boolean mask of a dev set made of whole template groups."""
     rng = random.Random(SEED)
     groups = sorted(df["group"].unique())
     rng.shuffle(groups)
@@ -57,8 +57,8 @@ def group_holdout(df: pd.DataFrame, frac: float = 0.2) -> np.ndarray:
     return df["group"].isin(dev).to_numpy()
 
 
+# best threshold for each label
 def tune_thresholds(y_true: np.ndarray, probs: np.ndarray) -> dict:
-    """Best F1 threshold per label on a dev set (0.5 if the label has no positives)."""
     from sklearn.metrics import f1_score
 
     out = {}

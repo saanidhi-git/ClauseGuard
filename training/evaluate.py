@@ -1,8 +1,4 @@
-"""Evaluate LR, NB and Legal-BERT on the UNFAIR-ToS test set and the ClauseGuard-IN test set.
-
-Writes backend/models/metrics.json, docs/results.md and charts in docs/figures/.
-Every number comes from running the saved models; nothing is typed in by hand.
-"""
+# Test all models and save the results
 
 import json
 from datetime import datetime, timezone

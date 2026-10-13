@@ -1,4 +1,4 @@
-"""SQLite database models and session helpers."""
+# Database tables
 
 from datetime import datetime, timezone
 from typing import Iterator, List, Optional
@@ -19,7 +19,7 @@ class Document(SQLModel, table=True):
     doc_type: str
     filename: Optional[str] = None
     created_at: datetime = Field(default_factory=_now)
-    status: str = "done"  # processing | done | error
+    status: str = "done"
     error: Optional[str] = None
     score: int = 0
     verdict: str = ""
@@ -64,16 +64,14 @@ engine = create_engine(f"sqlite:///{DB_PATH}", connect_args={"check_same_thread"
 
 
 def init_db() -> None:
-    """Create tables if they don't exist."""
     SQLModel.metadata.create_all(engine)
 
 
 def get_session() -> Iterator[Session]:
-    """FastAPI dependency that yields a DB session."""
     with Session(engine) as session:
         yield session
 
 
+# keep times in UTC
 def iso(dt: datetime) -> str:
-    """ISO time with a UTC marker (SQLite drops the timezone)."""
     return (dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)).isoformat()

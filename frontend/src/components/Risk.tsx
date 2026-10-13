@@ -1,7 +1,7 @@
 import { AlertOctagon, AlertTriangle, CheckCircle2, Info } from "lucide-react";
 import type { Level } from "../api";
 
-// risk colours are always paired with an icon and a text label
+// risk colours always come with an icon and a label
 export const LEVEL_STYLE: Record<Level, { text: string; bg: string; border: string; bar: string; icon: typeof Info }> = {
   High: {
     text: "text-red-700 dark:text-red-300",

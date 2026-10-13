@@ -1,4 +1,4 @@
-"""Turn PDF / DOCX / plain text into clean text with page spans."""
+# Read text from PDF, DOCX or TXT
 
 import io
 import re
@@ -9,18 +9,19 @@ from typing import List, Tuple
 from ..config import MAX_CHARS, MAX_PAGES
 
 
+# friendly error shown to the user
 class ExtractError(ValueError):
-    """Friendly error shown to the user."""
+    pass
 
 
 @dataclass
 class Extracted:
     text: str
-    page_spans: List[Tuple[int, int, int]] = field(default_factory=list)  # (start, end, page)
+    page_spans: List[Tuple[int, int, int]] = field(default_factory=list)
     page_count: int = 1
 
+    # page number for a position in the text
     def page_at(self, pos: int) -> int:
-        """Return the page number for a character offset."""
         for start, end, page in self.page_spans:
             if start <= pos < end:
                 return page
@@ -34,8 +35,8 @@ def _norm_line(line: str) -> str:
     return re.sub(r"\d+", "#", line.strip().lower())
 
 
+# remove headers, footers and page numbers
 def _clean_pages(pages: List[str]) -> List[str]:
-    """Remove repeated headers/footers, page numbers and broken hyphenation."""
     split = [p.splitlines() for p in pages]
     repeated = set()
     if len(pages) >= 3:
@@ -111,8 +112,8 @@ def from_text(text: str) -> Extracted:
     return _join_pages([text or ""])
 
 
+# read any supported file
 def extract(data: bytes, filename: str) -> Extracted:
-    """Pick the right extractor from the file extension and validate the result."""
     name = (filename or "").lower()
     if name.endswith(".pdf"):
         result = from_pdf(data)
@@ -125,8 +126,8 @@ def extract(data: bytes, filename: str) -> Extracted:
     return validate(result)
 
 
+# reject empty or very long documents
 def validate(result: Extracted) -> Extracted:
-    """Reject empty or overly long documents."""
     if len(result.text.split()) < 5:
         raise ExtractError("The document is empty or too short to analyse. Please check the file or paste the full text.")
     if len(result.text) > MAX_CHARS:

@@ -1,4 +1,4 @@
-"""Full analysis pipeline: segment -> classify -> risk -> explain -> facts -> summary."""
+# Main pipeline: split into clauses, classify, score, explain, extract facts, summarise
 
 import logging
 import re
@@ -15,12 +15,12 @@ from .nlp.extract import Extracted
 
 log = logging.getLogger("clauseguard.analyze")
 
-# documents above this many words are analysed in a background job
+# long documents are analysed in the background
 BACKGROUND_WORDS = 6000
 
 
+# guess the document type from common words
 def detect_doc_type(text: str) -> str:
-    """Guess rental / offer_letter / tos from keywords."""
     t = text.lower()
     scores = {
         "rental": len(re.findall(r"\b(rent|licensor|licensee|tenant|landlord|premises|leave and licen[cs]e)\b", t)),
@@ -30,8 +30,8 @@ def detect_doc_type(text: str) -> str:
     return max(scores, key=scores.get)
 
 
+# analyse a document and save the results
 def run_analysis(doc_id: int, extracted: Extracted, doc_type: str) -> None:
-    """Analyse a document and store the results (safe to call in a background task)."""
     t0 = time.time()
     with Session(engine) as s:
         doc = s.get(Document, doc_id)

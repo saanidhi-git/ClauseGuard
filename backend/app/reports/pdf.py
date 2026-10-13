@@ -1,4 +1,4 @@
-"""PDF report built with ReportLab."""
+# PDF report built with ReportLab
 
 import io
 from datetime import datetime
@@ -37,7 +37,6 @@ def _gauge(score: int) -> Drawing:
 
 
 def build_report(doc, clauses: List[dict]) -> bytes:
-    """Return PDF bytes for a document report."""
     buf = io.BytesIO()
     pdf = SimpleDocTemplate(buf, pagesize=A4, leftMargin=18 * mm, rightMargin=18 * mm,
                             topMargin=16 * mm, bottomMargin=16 * mm, title=f"ClauseGuard report - {doc.title}")

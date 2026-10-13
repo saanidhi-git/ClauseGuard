@@ -1,4 +1,4 @@
-"""Ask questions about a document: MiniLM embeddings + FAISS retrieval (+ optional LLM)."""
+# Question answering over the clauses of a document
 
 import logging
 import re
@@ -16,9 +16,9 @@ log = logging.getLogger("clauseguard.rag")
 _lock = threading.Lock()
 
 
+# load the sentence embedding model once
 @lru_cache(maxsize=1)
 def get_embedder():
-    """Load MiniLM once; returns None if it is not available."""
     if DISABLE_TRANSFORMERS:
         return None
     try:
@@ -30,8 +30,8 @@ def get_embedder():
         return None
 
 
+# turn texts into vectors
 def embed(texts: List[str]) -> np.ndarray:
-    """Normalised embeddings (MiniLM, or TF-IDF vectors as a fallback)."""
     model = get_embedder()
     if model is not None:
         with _lock:
@@ -64,8 +64,8 @@ class DocIndex:
 _indexes: "OrderedDict[int, DocIndex]" = OrderedDict()
 
 
+# search index for one document
 def get_index(doc_id: int, clauses: List[dict]) -> DocIndex:
-    """Per-document FAISS index, cached in memory (last 20 documents)."""
     idx = _indexes.get(doc_id)
     if idx is None or len(idx.clauses) != len(clauses):
         idx = DocIndex(clauses)
@@ -80,8 +80,8 @@ def drop_index(doc_id: int) -> None:
     _indexes.pop(doc_id, None)
 
 
+# best matching sentence in a clause
 def _highlight(clause_text: str, question: str) -> str:
-    """Pick the sentence in a clause that best matches the question."""
     parts = re.split(r"(?<!Rs\.)(?<!No\.)(?<!Mr\.)(?<!Ms\.)(?<=[.;])\s+(?=[A-Za-z(])", clause_text)
     sents = [s for s in parts if len(s.split()) > 3] or [clause_text]
     if len(sents) == 1:
@@ -98,8 +98,8 @@ RAG_SYSTEM = (
 )
 
 
+# find the 3 most relevant clauses and answer
 def ask(doc_id: int, clauses: List[dict], question: str, use_llm: bool = False) -> dict:
-    """Retrieve top-3 clauses and answer (LLM) or show highlighted matches (no LLM)."""
     question = (question or "").strip()[:500]
     hits = get_index(doc_id, clauses).search(question, k=3)
     matches = [{

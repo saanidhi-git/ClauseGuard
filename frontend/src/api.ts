@@ -1,4 +1,4 @@
-// Small typed client for the ClauseGuard API
+// Calls to the ClauseGuard API
 
 export type DocType = "rental" | "offer_letter" | "tos";
 export type Level = "High" | "Medium" | "Low" | "Safe";

@@ -1,4 +1,4 @@
-"""Unit tests for segmentation, entity extraction and risk scoring."""
+# Unit tests for segmentation, entity extraction and risk scoring
 
 from app.nlp.entities import clause_facts, extract_key_facts
 from app.nlp.extract import ExtractError, from_text, validate

@@ -1,4 +1,4 @@
-"""Text normalisation, tokenization, stopwords and lemmatization."""
+# Text cleaning: tokens, stopwords and lemmas
 
 import re
 import unicodedata
@@ -6,9 +6,9 @@ from functools import lru_cache
 from typing import Dict, List
 
 
+# load spaCy once
 @lru_cache(maxsize=1)
 def get_nlp():
-    """Load spaCy once (with a blank fallback if the model is missing)."""
     import spacy
 
     try:
@@ -27,12 +27,12 @@ def _stopwords() -> set:
         words = set(stopwords.words("english"))
     except LookupError:
         words = set(get_nlp().Defaults.stop_words)
-    # keep words that change legal meaning
+    # keep words like 'not' and 'without'
     return words - {"not", "no", "nor", "without", "against", "any", "all", "only", "before", "after"}
 
 
+# lowercase and tidy the text
 def normalize(text: str) -> str:
-    """Lowercase, unify unicode, map currency symbols and squeeze spaces."""
     text = unicodedata.normalize("NFKC", text or "")
     text = text.replace("₹", " inr ").replace("Rs.", " inr ").replace("Rs ", " inr ")
     text = text.lower()
@@ -54,7 +54,7 @@ def _lemmatizer():
         from nltk.stem import WordNetLemmatizer
 
         lem = WordNetLemmatizer()
-        lem.lemmatize("tests")  # triggers LookupError early if wordnet is missing
+        lem.lemmatize("tests")
         return lem
     except LookupError:
         return None
@@ -71,15 +71,15 @@ def lemmatize_tokens(tokens: List[str]) -> List[str]:
     return out
 
 
+# clean text for the baseline model
 def clean_for_model(text: str) -> str:
-    """Pipeline used by the baseline: normalise, tokenize, drop stopwords, lemmatize."""
     stops = _stopwords()
     tokens = [t for t in tokenize(text) if t not in stops and len(t) > 1]
     return " ".join(lemmatize_tokens(tokens))
 
 
+# each cleaning step, shown on Model Insights
 def analyze_steps(text: str) -> Dict[str, list]:
-    """Show every preprocessing step (for the Model Insights page)."""
     text = (text or "")[:2000]
     doc = get_nlp()(text)
     tokens = tokenize(text)
@@ -98,7 +98,7 @@ def analyze_steps(text: str) -> Dict[str, list]:
 SENT_RE = re.compile(r"(?<=[.;!?])\s+(?=[A-Z(\"“])")
 
 
+# split text into sentences
 def split_sentences(text: str) -> List[str]:
-    """Fast regex sentence splitter (spaCy is used for heavier work)."""
     parts = [p.strip() for p in SENT_RE.split(text) if p.strip()]
     return parts or [text.strip()]

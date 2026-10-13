@@ -1,4 +1,4 @@
-"""Plain-English explanations for flagged clauses."""
+# Simple explanations for risky clauses
 
 from typing import Dict, List
 
@@ -23,8 +23,8 @@ def _fill(template: str, facts: Dict[str, str]) -> str:
     )
 
 
+# clearer sentence when we know the amount and period
 def _special(label: str, facts: Dict[str, str]) -> str:
-    """Sharper sentences when both an amount and a period are present."""
     amount, period = facts.get("amount"), facts.get("period")
     if label == "deposit_forfeiture" and amount and period:
         return f"You could lose the {amount} deposit if you leave before {period}."
@@ -35,8 +35,8 @@ def _special(label: str, facts: Dict[str, str]) -> str:
     return ""
 
 
+# explanation from the category template
 def template_explanation(text: str, labels: List[str], probs: Dict[str, float]) -> dict:
-    """Build an explanation from the category templates and clause facts."""
     facts = clause_facts(text, labels[0] if labels else None)
     cats = [{
         "key": l, "name": CATEGORIES[l]["name"], "severity": SEVERITY_NAME[CATEGORIES[l]["severity"]],
@@ -59,8 +59,8 @@ def template_explanation(text: str, labels: List[str], probs: Dict[str, float]) 
     }
 
 
+# explanation, improved by the LLM if a key is set
 def explain(text: str, labels: List[str], probs: Dict[str, float], use_llm: bool = False) -> dict:
-    """Template explanation, optionally rewritten by the LLM in context."""
     base = template_explanation(text, labels, probs)
     if not labels or not use_llm:
         return base

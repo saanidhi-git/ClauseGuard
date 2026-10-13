@@ -1,11 +1,4 @@
-"""Build ClauseGuard-IN: ~300 team-authored clauses for Indian rental agreements, offer letters and app policies.
-
-Each template is written by the team and rendered 2-3 times with different wording choices
-([a|b]) and slot values ({rent}, {city}...). Variants of a template always stay in the same
-split, so the test set never contains a near-copy of a training clause.
-
-Output: data/clauseguard_in.csv, data/clauseguard_in_train.csv, data/clauseguard_in_test.csv
-"""
+# Build the ClauseGuard-IN dataset of Indian agreement clauses
 
 import random
 import re
@@ -73,9 +66,9 @@ SLOTS = {
 
 R, O, T = "rental", "offer_letter", "tos"
 
-# (doc_type, labels, template); labels are pipe-separated, "" means fair/neutral
+# empty label means a fair clause
 TEMPLATES = [
-    # ---------------- rental: risky ----------------
+    # rental: risky
     (R, "deposit_forfeiture|service_bond_lock_in", "If the [Licensee|Tenant] vacates the [premises|flat] before the expiry of the lock-in period of {lock} months, the entire security deposit of {dep} shall stand forfeited."),
     (R, "deposit_forfeiture", "The [Licensor|Owner] shall be entitled to deduct any amount from the security deposit as the [Licensor|Owner] deems fit, and such decision shall be final and binding on the [Licensee|Tenant]."),
     (R, "deposit_forfeiture", "The security deposit shall be refunded only after the [Licensor|Owner] finds a new [licensee|tenant] for the premises, and no interest shall be payable on it."),
@@ -104,7 +97,7 @@ TEMPLATES = [
     (R, "jurisdiction", "All disputes arising out of this agreement shall be subject to the exclusive jurisdiction of the courts at {farcity} only."),
     (R, "arbitration", "Any dispute between the parties shall be referred to a sole arbitrator appointed by the [Licensor|Owner], and the award of such arbitrator shall be final and binding."),
     (R, "arbitration|jurisdiction", "Disputes shall be settled by arbitration under the Arbitration and Conciliation Act, 1996 with the seat of arbitration at {farcity}, and the courts at {farcity} alone shall have jurisdiction."),
-    # ---------------- rental: fair / neutral ----------------
+    # rental: fair / neutral
     (R, "", "This Leave and Licence Agreement is made at {city} on this {day} day of {month} {year} between [Mr.|Shri] {owner}, residing at {addr}, hereinafter called the Licensor, and {tenant}, hereinafter called the Licensee."),
     (R, "", "The Licensor is the absolute owner of the flat bearing No. {flat}, {bldg}, {area}, {city}, admeasuring about {sqft} sq. ft. carpet area."),
     (R, "", "The licence is granted for a period of eleven months commencing from {date} and ending on {date2}."),
@@ -132,7 +125,7 @@ TEMPLATES = [
     (R, "", "The Licensee shall submit a copy of identity proof and the police verification form as required by the local police station."),
     (R, "", "Pets are allowed in the premises provided they do not cause nuisance to the neighbours."),
     (R, "", "Parking slot no. {n} in the stilt area is allotted for the use of the Licensee's two-wheeler."),
-    # ---------------- offer letter: risky ----------------
+    # offer letter: risky
     (O, "service_bond_lock_in", "You will be required to sign a service agreement to serve the Company for a minimum period of {bond_years} years from the date of joining. If you leave before completing this period, you shall pay the Company an amount of {bond} as liquidated damages."),
     (O, "service_bond_lock_in", "In consideration of the training provided, you agree to work with the Company for at least {bond_months} months, failing which you [will|shall] reimburse the training cost of {bond}."),
     (O, "service_bond_lock_in", "Your original educational certificates will be retained by the Company until you complete the bond period of {bond_years} years."),
@@ -157,7 +150,7 @@ TEMPLATES = [
     (O, "limitation_of_liability", "The Company shall not be liable for any loss of personal belongings, injury or damage suffered by you while travelling for work or at a client site."),
     (O, "arbitration", "Any dispute relating to your employment shall be referred to arbitration by an arbitrator appointed by the Company, whose decision shall be final."),
     (O, "jurisdiction", "All disputes arising out of this appointment shall be subject to the exclusive jurisdiction of the courts in {farcity}."),
-    # ---------------- offer letter: fair / neutral ----------------
+    # offer letter: fair / neutral
     (O, "", "We are pleased to offer you the position of {role} at {company}, {city}, with effect from {date}."),
     (O, "", "Your annual cost to company (CTC) will be {ctc}, the break-up of which is given in Annexure A."),
     (O, "", "You will be on probation for a period of six months from the date of joining, after which your performance will be reviewed."),
@@ -180,7 +173,7 @@ TEMPLATES = [
     (O, "", "You will be entitled to maternity or paternity leave as per the Company policy and applicable law."),
     (O, "", "This letter, together with its annexures, constitutes the entire terms of your employment with the Company."),
     (O, "", "Please carry a copy of your degree certificate, mark sheets, two photographs and a cancelled cheque on the day of joining for verification."),
-    # ---------------- terms of service / privacy: risky ----------------
+    # terms of service / privacy: risky
     (T, "contract_by_using", "By downloading, installing or using {app}, you agree to be bound by these Terms, whether or not you have read them."),
     (T, "contract_by_using|unilateral_change", "Your continued access to the platform constitutes acceptance of these Terms and any future updates to them."),
     (T, "unilateral_change", "We may revise these Terms at any time by posting the updated version on this page, and you are responsible for checking it regularly."),
@@ -201,7 +194,7 @@ TEMPLATES = [
     (T, "broad_data_sharing", "By using the app you allow us to access your contacts, photos, microphone and location, and to share this data with third-party service providers."),
     (T, "broad_data_sharing", "Your data may be transferred to and stored in any country where we or our partners operate and may be retained indefinitely."),
     (T, "broad_data_sharing", "We may sell or transfer your personal data as part of a merger, acquisition or sale of assets, or to any third party we choose."),
-    # ---------------- terms of service / privacy: fair / neutral ----------------
+    # terms of service / privacy: fair / neutral
     (T, "", "These Terms of Service explain the rules for using the {app} mobile application and website operated by {company}."),
     (T, "", "You must be at least 18 years old, or have the consent of a parent or guardian, to create an account."),
     (T, "", "You are responsible for keeping your password confidential and for all activity under your account."),
@@ -224,8 +217,8 @@ TEMPLATES = [
 TARGETS = {R: 110, O: 110, T: 80}
 
 
+# fill in the template with random choices
 def render(template: str, rng: random.Random) -> str:
-    """Fill [a|b] choices (same choice for repeated groups) and {slots}."""
     picks = {}
 
     def choose(m):
@@ -259,8 +252,8 @@ def build() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+# 80/20 split, keeping copies of a template together
 def split(df: pd.DataFrame, test_frac: float = 0.2):
-    """Stratified 80/20 split by template group, so variants never leak into test."""
     rng = random.Random(SEED)
     groups = df.groupby("group").agg(labels=("labels", "first"), doc_type=("doc_type", "first")).reset_index()
     groups["strat"] = groups["doc_type"] + ":" + groups["labels"].str.split("|").str[0].replace("", "none")

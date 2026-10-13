@@ -1,4 +1,4 @@
-"""Ask ClauseGuard: questions about a document."""
+# Ask ClauseGuard: questions about a document
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session, select

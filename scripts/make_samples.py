@@ -1,4 +1,4 @@
-"""Create the three demo documents in data/samples/ as .txt and .pdf (all names are fictional)."""
+# Create the sample documents (all names are made up)
 
 from pathlib import Path
 
@@ -331,7 +331,7 @@ def to_pdf(path: Path, header: str, text: str) -> None:
     head = ParagraphStyle("h", parent=body, fontName="Times-Bold")
 
     def decorate(canvas, doc):
-        # repeated header/footer and page number (the extractor should strip these)
+        # header, footer and page number
         canvas.saveState()
         canvas.setFont("Times-Italic", 8)
         canvas.drawString(20 * mm, 287 * mm, f"{header} - Confidential")

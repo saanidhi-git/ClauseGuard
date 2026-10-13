@@ -47,7 +47,7 @@ Students renting a PG or flat, freshers signing offer letters and everyone accep
 - **Ask ClauseGuard:** chat drawer with suggested questions per document type; answers cite clause numbers that scroll to and flash the clause.
 - **PDF report** with score gauge, key facts table, flagged clauses, summary and disclaimer.
 - **History** of analysed documents with delete.
-- **Model Insights** (for evaluators): pipeline, LR vs NB vs Legal-BERT comparison, per-label F1 chart, confusion matrix viewer, dataset stats, single-clause tester with all models side by side, and the preprocessing view (tokens → lemmas → POS → entities).
+- **Model Insights:** pipeline, LR vs NB vs Legal-BERT vs hybrid comparison, a plain-language guide to the metrics, confusion matrix viewer, dataset stats, single-clause tester with all models side by side, and the preprocessing view (tokens → lemmas → POS → entities).
 - Light theme with dark-mode toggle, mobile responsive, risk colours always paired with an icon and text.
 - **Works with no API key.** An optional Groq or Gemini key improves explanations, summaries and answers.
 
@@ -115,7 +115,6 @@ Each category's display name, severity, document types, explanation template, "w
 | ReportLab | PDF report and sample PDFs |
 | React + Vite + TypeScript | fast, typed single-page frontend |
 | Tailwind CSS | consistent styling, dark mode, responsive layout |
-| Recharts | per-label F1 chart on Model Insights |
 | react-router, lucide-react | routing and icons |
 
 ## Dataset details

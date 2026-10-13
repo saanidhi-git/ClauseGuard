@@ -1,4 +1,4 @@
-"""Clause classifier: fine-tuned Legal-BERT if available, else the TF-IDF baseline."""
+# Clause classifier
 
 import json
 import logging
@@ -15,8 +15,8 @@ from .preprocess import clean_for_model
 log = logging.getLogger("clauseguard.classify")
 
 
+# TF-IDF baseline model
 class BaselineModel:
-    """TF-IDF + one-vs-rest classifier saved by training/train_baseline.py."""
 
     def __init__(self, path: Path, name: str):
         import joblib
@@ -33,8 +33,8 @@ class BaselineModel:
         return _reorder(probs, self.labels)
 
 
+# fine-tuned Legal-BERT model
 class LegalBertModel:
-    """Fine-tuned Legal-BERT multi-label model."""
 
     name = "legal-bert"
 
@@ -63,12 +63,8 @@ class LegalBertModel:
         return _reorder(probs, self.labels)
 
 
+# Legal-BERT for the 8 ToS labels, baseline for the 6 Indian labels
 class HybridModel:
-    """Legal-BERT for the 8 UNFAIR-ToS labels, LR baseline for the 6 India labels.
-
-    Legal-BERT is best on the large UNFAIR-ToS data, while the baseline is better on the
-    small India-specific set, so each label uses the model that does better on it.
-    """
 
     name = "hybrid"
 
@@ -85,8 +81,8 @@ class HybridModel:
         return probs
 
 
+# put model outputs in the same label order
 def _reorder(probs: np.ndarray, labels: List[str]) -> np.ndarray:
-    """Map model columns onto the global 14-label order (missing labels get 0)."""
     full = np.zeros((probs.shape[0], len(LABELS)), dtype=float)
     for j, lab in enumerate(labels):
         if lab in LABELS:
@@ -94,8 +90,8 @@ def _reorder(probs: np.ndarray, labels: List[str]) -> np.ndarray:
     return full
 
 
+# loads the models once and reuses them
 class ClauseClassifier:
-    """Singleton that loads all models once and predicts in batches."""
 
     _instance: Optional["ClauseClassifier"] = None
     _lock = threading.Lock()
@@ -118,7 +114,7 @@ class ClauseClassifier:
             if path.exists():
                 try:
                     self.models[name] = BaselineModel(path, name)
-                except Exception as exc:  # never crash on a bad file
+                except Exception as exc:
                     log.warning("Could not load %s: %s", file, exc)
 
         bert_dir = MODELS_DIR / "legalbert"
@@ -151,8 +147,8 @@ class ClauseClassifier:
         th = getattr(model, "thresholds", {}) or {}
         return np.array([float(th.get(lab, 0.5)) for lab in LABELS])
 
+    # predict risk labels for each clause
     def predict(self, texts: List[str], doc_type: str) -> List[dict]:
-        """Return labels above threshold and probabilities for each clause."""
         if not texts:
             return []
         allowed = set(labels_for_doc_type(doc_type))
@@ -168,8 +164,8 @@ class ClauseClassifier:
             results.append({"labels": labels, "probs": p})
         return results
 
+    # run every model on one clause
     def compare(self, text: str) -> Dict[str, dict]:
-        """Probabilities from every loaded model for one clause (Model Insights)."""
         out = {}
         for name, model in self.models.items():
             row = model.predict_proba([text])[0]

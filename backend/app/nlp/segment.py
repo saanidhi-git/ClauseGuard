@@ -1,4 +1,4 @@
-"""Split a document into clauses."""
+# Split a document into clauses
 
 import re
 from typing import Callable, List, Optional
@@ -7,15 +7,15 @@ from .preprocess import split_sentences
 
 HEADING_RE = re.compile(
     r"""^\s*(
-        (?:clause|article|section)\s+\d+[a-z]?(?:\.\d+)*\s*[.:)\-]?   # Clause 5 / Article 2
-      | \d{1,2}(?:\.\d{1,2}){1,3}\.?(?=\s) | \d{1,2}[.)](?=\s)        # 1. / 1.1 / 2)
-      | \([a-z]\)|[a-z]\)                                             # (a) / a)
-      | \((?:i|ii|iii|iv|v|vi|vii|viii|ix|x|xi|xii)\)|(?:i|ii|iii|iv|v|vi|vii|viii|ix|x)\)  # (iv) / iv)
+        (?:clause|article|section)\s+\d+[a-z]?(?:\.\d+)*\s*[.:)\-]?
+      | \d{1,2}(?:\.\d{1,2}){1,3}\.?(?=\s) | \d{1,2}[.)](?=\s)
+      | \([a-z]\)|[a-z]\)
+      | \((?:i|ii|iii|iv|v|vi|vii|viii|ix|x|xi|xii)\)|(?:i|ii|iii|iv|v|vi|vii|viii|ix|x)\)
     )\s*""",
     re.I | re.X,
 )
 
-# leading ALL-CAPS heading such as "SECURITY DEPOSIT The Licensee..."
+# heading in capitals at the start of a clause
 HEAD_WORDS_RE = re.compile(r"^((?:[A-Z0-9-][A-Z0-9&/,'().\-]*\s+){0,8}[A-Z][A-Z&/,'().\-]+)\s+(?=[A-Z][a-z])")
 
 MIN_WORDS = 6
@@ -26,8 +26,8 @@ def _words(text: str) -> int:
     return len(text.split())
 
 
+# split at numbered headings
 def _numbered_blocks(text: str) -> List[dict]:
-    """Group lines into blocks that start at a numbered heading."""
     blocks: List[dict] = []
     pos = 0
     current: Optional[dict] = None
@@ -51,8 +51,8 @@ def _numbered_blocks(text: str) -> List[dict]:
     return blocks
 
 
+# split by sentences when there is no numbering
 def _sentence_blocks(text: str) -> List[dict]:
-    """Fallback: paragraphs, then sentences."""
     blocks = []
     for m in re.finditer(r"[^\n]+(?:\n(?!\n)[^\n]+)*", text):
         para = m.group(0)
@@ -65,8 +65,8 @@ def _sentence_blocks(text: str) -> List[dict]:
     return blocks
 
 
+# join very short pieces with the next clause
 def _merge_short(blocks: List[dict]) -> List[dict]:
-    """Merge very short blocks (like headings) into the following block."""
     out: List[dict] = []
     carry: Optional[dict] = None
     for b in blocks:
@@ -87,8 +87,8 @@ def _merge_short(blocks: List[dict]) -> List[dict]:
     return out
 
 
+# break very long clauses
 def _split_long(blocks: List[dict]) -> List[dict]:
-    """Split very long blocks at sentence boundaries."""
     out = []
     for b in blocks:
         if _words(b["text"]) <= MAX_WORDS:
@@ -108,8 +108,8 @@ def _split_long(blocks: List[dict]) -> List[dict]:
     return out
 
 
+# split a document into clauses
 def segment(text: str, page_at: Optional[Callable[[int], int]] = None) -> List[dict]:
-    """Return [{id, number, text, page, start, end}] for the document."""
     if not text or not text.strip():
         return []
     blocks = _numbered_blocks(text)
