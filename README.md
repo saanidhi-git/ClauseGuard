@@ -8,6 +8,7 @@ app_port: 7860
 pinned: false
 short_description: Know what you sign - unfair clause detector for agreements
 ---
+--
 
 # ClauseGuard: Know what you sign
 
